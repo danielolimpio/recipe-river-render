@@ -18,6 +18,9 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        culinary: "bg-gradient-hero text-primary-foreground shadow-warm hover:opacity-90 transition-opacity",
+        spice: "bg-culinary-spice text-white shadow-sm hover:bg-culinary-spice/90",
+        herb: "bg-culinary-herb text-white shadow-sm hover:bg-culinary-herb/90",
       },
       size: {
         default: "h-10 px-4 py-2",
