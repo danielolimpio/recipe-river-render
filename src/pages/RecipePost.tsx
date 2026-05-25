@@ -30,6 +30,7 @@ const RecipePost = () => {
         description={`${recipe.title}: aprenda o passo a passo desta receita de ${recipe.category.toLowerCase()} por ${recipe.author}. Ingredientes, modo de preparo e dicas no Tasty.`}
         path={`/receita/${recipe.slug}`}
         type="article"
+        image={recipe.image}
       />
       {/* Header banner */}
       <section className="page-banner py-20">
