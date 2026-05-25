@@ -3,6 +3,7 @@ import { Clock, ChevronRight, Apple, Smartphone, Facebook, Twitter, Youtube, Awa
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Layout } from '@/components/Layout';
+import { SEO } from '@/components/SEO';
 import { RecipeCard } from '@/components/RecipeCard';
 import { recipes, chefs, categories } from '@/data/recipes';
 
