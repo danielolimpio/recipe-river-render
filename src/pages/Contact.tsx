@@ -21,8 +21,12 @@ const Contact = () => {
       />
 
       {/* Info cards */}
-      <section className="py-20">
-        <div className="container-tasty grid grid-cols-1 md:grid-cols-3 gap-6">
+      <section className="py-20" aria-labelledby="contact-info-heading">
+        <div className="container-tasty">
+          <h2 id="contact-info-heading" className="text-2xl md:text-3xl font-extrabold text-tasty-dark text-center mb-10">
+            Informações de Contato
+          </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             { icon: MapPin, title: 'Endereço', lines: ['Rua das Flores, 123', 'São Paulo - SP, Brasil'] },
             { icon: Send, title: 'E-mail', lines: ['contato@tasty.com', 'parceria@tasty.com'] },
@@ -36,6 +40,7 @@ const Contact = () => {
               ))}
             </div>
           ))}
+        </div>
         </div>
       </section>
 
@@ -68,10 +73,22 @@ const Contact = () => {
             <h3 className="text-2xl font-extrabold text-tasty-dark mb-2">Fale Conosco</h3>
             <p className="text-tasty-gray text-sm mb-6">Preencha o formulário e retornaremos em breve.</p>
             <form className="space-y-4">
-              <Input placeholder="Nome *" className="h-11" />
-              <Input type="email" placeholder="E-mail *" className="h-11" />
-              <Input placeholder="Assunto" className="h-11" />
-              <Textarea placeholder="Mensagem *" rows={5} />
+              <div>
+                <label htmlFor="contact-name" className="sr-only">Nome</label>
+                <Input id="contact-name" placeholder="Nome *" aria-label="Seu nome" className="h-11" />
+              </div>
+              <div>
+                <label htmlFor="contact-email" className="sr-only">E-mail</label>
+                <Input id="contact-email" type="email" placeholder="E-mail *" aria-label="Seu e-mail" className="h-11" />
+              </div>
+              <div>
+                <label htmlFor="contact-subject" className="sr-only">Assunto</label>
+                <Input id="contact-subject" placeholder="Assunto" aria-label="Assunto da mensagem" className="h-11" />
+              </div>
+              <div>
+                <label htmlFor="contact-message" className="sr-only">Mensagem</label>
+                <Textarea id="contact-message" placeholder="Mensagem *" aria-label="Sua mensagem" rows={5} />
+              </div>
               <Button className="rounded-full bg-tasty-orange hover:bg-tasty-orange-hover text-white px-6 h-11 font-semibold">
                 Enviar Mensagem
               </Button>

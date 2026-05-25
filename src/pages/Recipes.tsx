@@ -31,8 +31,11 @@ const Recipes = () => {
         current="Receitas"
       />
 
-      <section className="py-20">
+      <section className="py-20" aria-labelledby="recipes-heading">
         <div className="container-tasty">
+          <h2 id="recipes-heading" className="sr-only">
+            {category ? `Receitas na categoria ${category}` : 'Todas as receitas'}
+          </h2>
           {category && (
             <p className="text-center text-sm text-tasty-gray mb-8">
               Mostrando receitas em <span className="text-tasty-orange font-semibold">{category}</span>

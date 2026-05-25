@@ -24,10 +24,10 @@ export const SiteFooter = () => {
               ))}
             </div>
             <div className="hidden lg:flex items-center gap-2 shrink-0">
-              <button className="w-8 h-8 rounded border border-white/20 flex items-center justify-center hover:bg-white/5">
+              <button aria-label="Receitas anteriores" className="w-8 h-8 rounded border border-white/20 flex items-center justify-center hover:bg-white/5">
                 <ChevronLeft className="h-4 w-4" />
               </button>
-              <button className="w-8 h-8 rounded border border-white/20 flex items-center justify-center hover:bg-white/5">
+              <button aria-label="Próximas receitas" className="w-8 h-8 rounded border border-white/20 flex items-center justify-center hover:bg-white/5">
                 <ChevronRight className="h-4 w-4" />
               </button>
             </div>

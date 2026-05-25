@@ -27,11 +27,14 @@ const Index = () => {
               Receita do Dia
             </p>
             <h1 className="text-5xl md:text-6xl font-extrabold text-tasty-dark mb-6 leading-[1.05]">
-              Panquecas Fofas com Mirtilos
+              Tasty — Receitas de Chef para Sua Cozinha
             </h1>
+            <h2 className="text-2xl md:text-3xl font-bold text-tasty-dark/90 mb-4">
+              Em destaque: Panquecas Fofas com Mirtilos
+            </h2>
             <div className="flex flex-wrap items-center gap-6 mb-6 text-sm text-tasty-gray">
               <div className="flex items-center gap-2">
-                <img src={heroRecipe.authorAvatar} alt={heroRecipe.author} className="w-8 h-8 rounded-full" />
+                <img src={heroRecipe.authorAvatar} alt={`Foto do autor ${heroRecipe.author}`} className="w-8 h-8 rounded-full" />
                 <span>Por <span className="text-tasty-dark font-semibold">Rafael Macedo</span></span>
               </div>
               <div className="flex items-center gap-2">
@@ -55,7 +58,7 @@ const Index = () => {
           <div className="relative">
             <img
               src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=900&h=900&fit=crop"
-              alt="Panquecas com mirtilos"
+              alt="Pilha de panquecas fofas com mirtilos frescos e calda"
               className="w-full aspect-square object-cover rounded-md shadow-card"
             />
           </div>
@@ -99,8 +102,9 @@ const Index = () => {
                 to={`/receitas?categoria=${encodeURIComponent(cat.name)}`}
                 key={cat.name}
                 className="group relative aspect-square rounded-md overflow-hidden"
+                aria-label={`Ver receitas da categoria ${cat.name}`}
               >
-                <img src={cat.image} alt={cat.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <img src={cat.image} alt={`Categoria ${cat.name}`} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                 <span className="absolute bottom-4 left-4 text-white font-extrabold text-lg">{cat.name}</span>
               </Link>
@@ -115,7 +119,7 @@ const Index = () => {
           <div className="bg-tasty-light">
             <img
               src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&h=900&fit=crop"
-              alt="App"
+              alt="Pessoa cozinhando usando o app Tasty no celular"
               className="w-full h-full object-cover min-h-[320px]"
             />
           </div>
@@ -160,20 +164,27 @@ const Index = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-4xl mx-auto">
-            {chefs.map((c) => (
-              <div key={c.name} className="text-center">
-                <img src={c.avatar} alt={c.name} className="w-36 h-36 rounded-full object-cover mx-auto mb-5 shadow-soft" />
-                <h3 className="font-extrabold text-tasty-dark text-lg">{c.name}</h3>
-                <p className="text-tasty-gray text-sm mb-4">{c.role}</p>
-                <div className="flex items-center justify-center gap-2">
-                  {[Facebook, Twitter, Youtube].map((Icon, i) => (
-                    <a key={i} href="#" className="w-8 h-8 rounded-full bg-tasty-orange text-white flex items-center justify-center hover:bg-tasty-orange-hover">
-                      <Icon className="h-4 w-4" />
-                    </a>
-                  ))}
+            {chefs.map((c) => {
+              const socials = [
+                { Icon: Facebook, label: 'Facebook' },
+                { Icon: Twitter, label: 'Twitter' },
+                { Icon: Youtube, label: 'YouTube' },
+              ];
+              return (
+                <div key={c.name} className="text-center">
+                  <img src={c.avatar} alt={`Chef ${c.name}`} className="w-36 h-36 rounded-full object-cover mx-auto mb-5 shadow-soft" />
+                  <h3 className="font-extrabold text-tasty-dark text-lg">{c.name}</h3>
+                  <p className="text-tasty-gray text-sm mb-4">{c.role}</p>
+                  <div className="flex items-center justify-center gap-2">
+                    {socials.map(({ Icon, label }) => (
+                      <a key={label} href="#" aria-label={`${label} de ${c.name}`} className="w-8 h-8 rounded-full bg-tasty-orange text-white flex items-center justify-center hover:bg-tasty-orange-hover">
+                        <Icon className="h-4 w-4" />
+                      </a>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -220,7 +231,8 @@ const Index = () => {
               Informe seu e-mail abaixo para receber receitas e dicas semanais.
             </p>
             <form className="flex flex-col sm:flex-row gap-3">
-              <Input placeholder="Seu melhor e-mail" className="rounded-full h-11" />
+              <label htmlFor="newsletter-email" className="sr-only">E-mail para newsletter</label>
+              <Input id="newsletter-email" type="email" placeholder="Seu melhor e-mail" aria-label="E-mail para newsletter" className="rounded-full h-11" />
               <Button className="rounded-full bg-tasty-orange hover:bg-tasty-orange-hover text-white px-6 h-11 font-semibold">
                 Inscrever-se
               </Button>

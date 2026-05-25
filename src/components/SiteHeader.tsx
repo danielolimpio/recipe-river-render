@@ -40,7 +40,8 @@ export const SiteHeader = () => {
 
         {searchOpen && (
           <div className="pb-4">
-            <Input placeholder="Buscar receitas..." className="rounded-full" autoFocus />
+            <label htmlFor="site-search" className="sr-only">Buscar receitas</label>
+            <Input id="site-search" placeholder="Buscar receitas..." aria-label="Buscar receitas" className="rounded-full" autoFocus />
           </div>
         )}
       </div>
