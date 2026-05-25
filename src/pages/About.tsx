@@ -45,7 +45,7 @@ const About = () => {
           <div>
             <img
               src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=900&h=900&fit=crop"
-              alt="Chef"
+              alt="Chef Bruno Tavares preparando prato na cozinha"
               className="w-full rounded-md object-cover aspect-square"
             />
           </div>
@@ -61,7 +61,7 @@ const About = () => {
               alt="Aula de culinária"
               className="absolute inset-0 w-full h-full object-cover"
             />
-            <button className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors">
+            <button aria-label="Reproduzir vídeo da aula de culinária" className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors">
               <span className="w-16 h-16 rounded-full bg-white flex items-center justify-center">
                 <Play className="h-6 w-6 text-tasty-orange ml-1" fill="currentColor" />
               </span>
@@ -95,20 +95,27 @@ const About = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-4xl mx-auto">
-            {chefs.map((c) => (
-              <div key={c.name} className="text-center">
-                <img src={c.avatar} alt={c.name} className="w-36 h-36 rounded-full object-cover mx-auto mb-5" />
-                <h3 className="font-extrabold text-tasty-dark text-lg">{c.name}</h3>
-                <p className="text-tasty-gray text-sm mb-4">{c.role}</p>
-                <div className="flex items-center justify-center gap-2">
-                  {[Facebook, Twitter, Youtube].map((Icon, i) => (
-                    <a key={i} href="#" className="w-8 h-8 rounded-full bg-tasty-orange text-white flex items-center justify-center hover:bg-tasty-orange-hover">
-                      <Icon className="h-4 w-4" />
-                    </a>
-                  ))}
+            {chefs.map((c) => {
+              const socials = [
+                { Icon: Facebook, label: 'Facebook' },
+                { Icon: Twitter, label: 'Twitter' },
+                { Icon: Youtube, label: 'YouTube' },
+              ];
+              return (
+                <div key={c.name} className="text-center">
+                  <img src={c.avatar} alt={`Chef ${c.name}`} className="w-36 h-36 rounded-full object-cover mx-auto mb-5" />
+                  <h3 className="font-extrabold text-tasty-dark text-lg">{c.name}</h3>
+                  <p className="text-tasty-gray text-sm mb-4">{c.role}</p>
+                  <div className="flex items-center justify-center gap-2">
+                    {socials.map(({ Icon, label }) => (
+                      <a key={label} href="#" aria-label={`${label} de ${c.name}`} className="w-8 h-8 rounded-full bg-tasty-orange text-white flex items-center justify-center hover:bg-tasty-orange-hover">
+                        <Icon className="h-4 w-4" />
+                      </a>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -126,7 +133,7 @@ const About = () => {
             <div className="relative z-10 h-full flex items-center justify-between gap-6 p-8 md:p-12 text-white">
               <div>
                 <div className="flex items-center gap-2 mb-3 text-xs uppercase tracking-wider">
-                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=60" alt="" className="w-7 h-7 rounded-full" />
+                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=60" alt="Foto de Dorothy Valdez" className="w-7 h-7 rounded-full" />
                   Por Dorothy Valdez
                 </div>
                 <h3 className="text-3xl md:text-5xl font-extrabold mb-2">Receitas da Vovó</h3>
@@ -153,7 +160,7 @@ const About = () => {
             {testimonials.map((t) => (
               <div key={t.name} className="bg-muted/40 rounded-md p-8 text-center">
                 <p className="text-tasty-gray text-sm mb-6 italic">"{t.text}"</p>
-                <img src={t.avatar} alt={t.name} className="w-14 h-14 rounded-full object-cover mx-auto mb-3" />
+                <img src={t.avatar} alt={`Foto de ${t.name}`} className="w-14 h-14 rounded-full object-cover mx-auto mb-3" />
                 <p className="font-extrabold text-tasty-dark text-sm">{t.name}</p>
               </div>
             ))}
@@ -170,7 +177,8 @@ const About = () => {
               Informe seu e-mail abaixo para receber receitas e dicas semanais.
             </p>
             <form className="flex flex-col sm:flex-row gap-3">
-              <Input placeholder="Seu melhor e-mail" className="rounded-full h-11" />
+              <label htmlFor="about-newsletter-email" className="sr-only">E-mail para newsletter</label>
+              <Input id="about-newsletter-email" type="email" placeholder="Seu melhor e-mail" aria-label="E-mail para newsletter" className="rounded-full h-11" />
               <Button className="rounded-full bg-tasty-orange hover:bg-tasty-orange-hover text-white px-6 h-11 font-semibold">
                 Inscrever-se
               </Button>
