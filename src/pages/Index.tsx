@@ -3,6 +3,7 @@ import { Clock, ChevronRight, Apple, Smartphone, Facebook, Twitter, Youtube, Awa
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Layout } from '@/components/Layout';
+import { SEO } from '@/components/SEO';
 import { RecipeCard } from '@/components/RecipeCard';
 import { recipes, chefs, categories } from '@/data/recipes';
 
@@ -19,6 +20,11 @@ const categoryFeature = [
 const Index = () => {
   return (
     <Layout>
+      <SEO
+        title="Tasty — Receitas Fáceis e Deliciosas de Chef"
+        description="Descubra receitas fáceis e deliciosas dos melhores chefs. Pratos do dia a dia, sobremesas e clássicos da culinária para você cozinhar em casa."
+        path="/"
+      />
       {/* Hero */}
       <section className="bg-tasty-peach relative overflow-hidden">
         <div className="container-tasty py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center relative z-10">

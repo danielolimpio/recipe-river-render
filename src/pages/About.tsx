@@ -1,4 +1,5 @@
 import { Layout } from '@/components/Layout';
+import { SEO } from '@/components/SEO';
 import { PageBanner } from '@/components/PageBanner';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -15,6 +16,11 @@ const testimonials = [
 const About = () => {
   return (
     <Layout>
+      <SEO
+        title="Sobre a Tasty — Nossa História e Chefs"
+        description="Conheça a história da Tasty, nossa paixão pela culinária e os chefs por trás das receitas que reúnem famílias e despertam memórias."
+        path="/sobre"
+      />
       <PageBanner
         title="Sobre"
         description="Conheça a história da Tasty, nossa paixão pela culinária e os chefs que tornam tudo isso possível."

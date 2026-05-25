@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Layout } from '@/components/Layout';
+import { SEO } from '@/components/SEO';
 import { PageBanner } from '@/components/PageBanner';
 import { RecipeCard } from '@/components/RecipeCard';
 import { Button } from '@/components/ui/button';
@@ -25,6 +26,15 @@ const Recipes = () => {
 
   return (
     <Layout>
+      <SEO
+        title={category ? `Receitas de ${category} — Tasty` : 'Todas as Receitas — Tasty'}
+        description={
+          category
+            ? `Veja a coleção completa de receitas de ${category} no Tasty: opções fáceis, rápidas e deliciosas para preparar em casa.`
+            : 'Explore a coleção completa de receitas Tasty: do café da manhã ao jantar, opções fáceis e deliciosas para todos os gostos e ocasiões.'
+        }
+        path={category ? `/receitas?categoria=${encodeURIComponent(category)}` : '/receitas'}
+      />
       <PageBanner
         title="Receitas"
         description="Explore nossa coleção completa de receitas: do café da manhã ao jantar, opções para todos os gostos e ocasiões."
