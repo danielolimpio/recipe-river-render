@@ -52,13 +52,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				culinary: {
-					warm: 'hsl(var(--culinary-warm))',
-					'warm-foreground': 'hsl(var(--culinary-warm-foreground))',
-					spice: 'hsl(var(--culinary-spice))',
-					herb: 'hsl(var(--culinary-herb))',
-					cream: 'hsl(var(--culinary-cream))',
-					earth: 'hsl(var(--culinary-earth))'
+				tasty: {
+					orange: 'hsl(var(--tasty-orange))',
+					'orange-hover': 'hsl(var(--tasty-orange-hover))',
+					peach: 'hsl(var(--tasty-peach))',
+					dark: 'hsl(var(--tasty-dark))',
+					darker: 'hsl(var(--tasty-darker))',
+					gray: 'hsl(var(--tasty-gray))',
+					light: 'hsl(var(--tasty-light))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -77,9 +78,8 @@ export default {
 				'gradient-accent': 'var(--gradient-accent)'
 			},
 			boxShadow: {
-				'warm': 'var(--shadow-warm)',
 				'card': 'var(--shadow-card)',
-				'elegant': 'var(--shadow-elegant)'
+				'soft': 'var(--shadow-soft)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
