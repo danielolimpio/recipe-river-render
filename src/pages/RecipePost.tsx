@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { Layout } from '@/components/Layout';
+import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -24,6 +25,12 @@ const RecipePost = () => {
 
   return (
     <Layout>
+      <SEO
+        title={`${recipe.title} — Receita Tasty`}
+        description={`${recipe.title}: aprenda o passo a passo desta receita de ${recipe.category.toLowerCase()} por ${recipe.author}. Ingredientes, modo de preparo e dicas no Tasty.`}
+        path={`/receita/${recipe.slug}`}
+        type="article"
+      />
       {/* Header banner */}
       <section className="page-banner py-20">
         <div className="container-tasty relative z-10 text-center max-w-3xl">

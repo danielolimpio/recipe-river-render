@@ -1,4 +1,5 @@
 import { Layout } from '@/components/Layout';
+import { SEO } from '@/components/SEO';
 import { PageBanner } from '@/components/PageBanner';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -14,6 +15,11 @@ import {
 const Contact = () => {
   return (
     <Layout>
+      <SEO
+        title="Contato — Tasty"
+        description="Fale com a equipe Tasty: tire dúvidas, envie sua receita ou proponha parcerias. Respondemos em até 5 dias úteis."
+        path="/contato"
+      />
       <PageBanner
         title="Contato"
         description="Estamos sempre à disposição para tirar suas dúvidas, receber sugestões e novas receitas."
