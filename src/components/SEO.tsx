@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 
-const SITE_URL = 'https://recipe-river-render.lovable.app';
-const DEFAULT_OG_IMAGE = `${SITE_URL}/og-tasty.jpg`;
+const SITE_URL = 'https://culinariafitness.com';
+const DEFAULT_OG_IMAGE = `${SITE_URL}/og-culinaria-fitness.jpg`;
 
 interface SEOProps {
   title: string;
