@@ -27,11 +27,11 @@ const Recipes = () => {
   return (
     <Layout>
       <SEO
-        title={category ? `Receitas de ${category} — Tasty` : 'Todas as Receitas — Tasty'}
+        title={category ? `Receitas de ${category} — Culinária Fitness` : 'Todas as Receitas — Culinária Fitness'}
         description={
           category
-            ? `Veja a coleção completa de receitas de ${category} no Tasty: opções fáceis, rápidas e deliciosas para preparar em casa.`
-            : 'Explore a coleção completa de receitas Tasty: do café da manhã ao jantar, opções fáceis e deliciosas para todos os gostos e ocasiões.'
+            ? `Veja a coleção completa de receitas de ${category} no Culinária Fitness: opções fáceis, rápidas e deliciosas para preparar em casa.`
+            : 'Explore a coleção completa de receitas Culinária Fitness: do café da manhã ao jantar, opções fáceis e deliciosas para todos os gostos e ocasiões.'
         }
         path={category ? `/receitas?categoria=${encodeURIComponent(category)}` : '/receitas'}
       />

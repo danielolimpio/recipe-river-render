@@ -38,7 +38,8 @@ export const SiteFooter = () => {
       {/* Main columns */}
       <div className="container-tasty py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
-          <h4 className="font-extrabold text-base mb-5">Conheça a Tasty</h4>
+          <img src="/logo-culinaria-fitness.png" alt="Culinária Fitness" className="h-12 w-auto mb-5 brightness-0 invert" />
+          <h4 className="font-extrabold text-base mb-5">Conheça a Culinária Fitness</h4>
           <ul className="space-y-3 text-sm text-white/70">
             <li><Link to="/sobre" className="hover:text-tasty-orange">Introdução</Link></li>
             <li><Link to="/receitas" className="hover:text-tasty-orange">Receitas</Link></li>
@@ -67,7 +68,7 @@ export const SiteFooter = () => {
           <p className="text-sm text-white/70 mb-4">Fax: (+55) 11 5555-0100</p>
           <p className="text-sm text-white/70">Precisa de ajuda?</p>
           <p className="text-sm">
-            Fale com: <a href="mailto:contato@tasty.com" className="text-tasty-orange hover:underline">contato@tasty.com</a>
+            Fale com: <a href="mailto:contato@culinariafitness.co" className="text-tasty-orange hover:underline">contato@culinariafitness.co</a>
           </p>
         </div>
 
@@ -100,7 +101,7 @@ export const SiteFooter = () => {
 
       <div className="border-t border-white/10">
         <div className="container-tasty py-5 text-xs text-white/50">
-          Copyright © 2024 — Tasty. Todos os direitos reservados.
+          Copyright © 2026 — Culinária Fitness. Todos os direitos reservados.
         </div>
       </div>
     </footer>

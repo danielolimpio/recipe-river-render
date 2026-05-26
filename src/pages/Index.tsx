@@ -21,7 +21,7 @@ const Index = () => {
   return (
     <Layout>
       <SEO
-        title="Tasty — Receitas Fáceis e Deliciosas de Chef"
+        title="Culinária Fitness — Receitas Fáceis e Deliciosas de Chef"
         description="Descubra receitas fáceis e deliciosas dos melhores chefs. Pratos do dia a dia, sobremesas e clássicos da culinária para você cozinhar em casa."
         path="/"
       />
@@ -33,7 +33,7 @@ const Index = () => {
               Receita do Dia
             </p>
             <h1 className="text-5xl md:text-6xl font-extrabold text-tasty-dark mb-6 leading-[1.05]">
-              Tasty — Receitas de Chef para Sua Cozinha
+              Culinária Fitness — Receitas de Chef para Sua Cozinha
             </h1>
             <h2 className="text-2xl md:text-3xl font-bold text-tasty-dark/90 mb-4">
               Em destaque: Panquecas Fofas com Mirtilos
@@ -125,7 +125,7 @@ const Index = () => {
           <div className="bg-tasty-light">
             <img
               src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&h=900&fit=crop"
-              alt="Pessoa cozinhando usando o app Tasty no celular"
+              alt="Pessoa cozinhando usando o app Culinária Fitness no celular"
               className="w-full h-full object-cover min-h-[320px]"
             />
           </div>

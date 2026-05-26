@@ -26,8 +26,8 @@ const RecipePost = () => {
   return (
     <Layout>
       <SEO
-        title={`${recipe.title} — Receita Tasty`}
-        description={`${recipe.title}: aprenda o passo a passo desta receita de ${recipe.category.toLowerCase()} por ${recipe.author}. Ingredientes, modo de preparo e dicas no Tasty.`}
+        title={`${recipe.title} — Receita Culinária Fitness`}
+        description={`${recipe.title}: aprenda o passo a passo desta receita de ${recipe.category.toLowerCase()} por ${recipe.author}. Ingredientes, modo de preparo e dicas no Culinária Fitness.`}
         path={`/receita/${recipe.slug}`}
         type="article"
         image={recipe.image}
@@ -140,7 +140,7 @@ const RecipePost = () => {
 
           <p className="text-tasty-orange text-sm leading-relaxed mb-12">
             Sirva acompanhada de uma bebida refrescante e desfrute deste prato em boa companhia.
-            Não esqueça de compartilhar a sua versão com a gente nas redes sociais usando #TastyBrasil.
+            Não esqueça de compartilhar a sua versão com a gente nas redes sociais usando #Culinária FitnessBrasil.
           </p>
 
           {/* Comments */}
@@ -154,7 +154,7 @@ const RecipePost = () => {
                   <div className="w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold shrink-0">T</div>
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-2 text-xs text-tasty-gray">
-                      <span className="font-bold text-tasty-dark">Tasty</span>
+                      <span className="font-bold text-tasty-dark">Culinária Fitness</span>
                       <div className="flex items-center gap-3">
                         <span>{recipe.date}</span>
                         <button className="text-tasty-orange font-semibold hover:underline">Responder</button>
