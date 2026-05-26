@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { Search, User, Facebook, Twitter, Instagram, Menu, X, UtensilsCrossed } from 'lucide-react';
+import { Search, User, Facebook, Twitter, Instagram, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import logo from '@/assets/logo-culinaria-fitness.png';
 
 const navItems = [
   { label: 'Início', to: '/' },
@@ -16,24 +17,23 @@ export const SiteHeader = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="bg-background border-b border-border sticky top-0 z-50">
+    <header className="bg-tasty-dark text-white border-b border-white/10 sticky top-0 z-50">
       {/* Top bar */}
       <div className="container-tasty">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           <button
             onClick={() => setSearchOpen(!searchOpen)}
-            className="text-foreground/70 hover:text-tasty-orange transition-colors"
+            className="text-white/70 hover:text-tasty-orange transition-colors"
             aria-label="Buscar"
           >
             <Search className="h-[18px] w-[18px]" />
           </button>
 
-          <Link to="/" className="flex items-center gap-2">
-            <UtensilsCrossed className="h-7 w-7 text-tasty-orange" />
-            <span className="text-2xl font-extrabold tracking-tight">Tasty</span>
+          <Link to="/" aria-label="Culinária Fitness — Início" className="flex items-center">
+            <img src={logo} alt="Culinária Fitness" className="h-12 md:h-14 w-auto" />
           </Link>
 
-          <button className="text-foreground/70 hover:text-tasty-orange transition-colors" aria-label="Conta">
+          <button className="text-white/70 hover:text-tasty-orange transition-colors" aria-label="Conta">
             <User className="h-[18px] w-[18px]" />
           </button>
         </div>
@@ -41,16 +41,16 @@ export const SiteHeader = () => {
         {searchOpen && (
           <div className="pb-4">
             <label htmlFor="site-search" className="sr-only">Buscar receitas</label>
-            <Input id="site-search" placeholder="Buscar receitas..." aria-label="Buscar receitas" className="rounded-full" autoFocus />
+            <Input id="site-search" placeholder="Buscar receitas..." aria-label="Buscar receitas" className="rounded-full bg-white text-foreground" autoFocus />
           </div>
         )}
       </div>
 
       {/* Nav bar */}
-      <div className="border-t border-border">
+      <div className="border-t border-white/10">
         <div className="container-tasty">
-          <div className="flex items-center justify-between h-14">
-            <div className="hidden md:flex items-center gap-4 text-foreground/60">
+          <div className="flex items-center justify-between h-14 relative">
+            <div className="hidden md:flex items-center gap-4 text-white/60">
               <a href="#" aria-label="Facebook" className="hover:text-tasty-orange transition-colors">
                 <Facebook className="h-4 w-4" />
               </a>
@@ -70,7 +70,7 @@ export const SiteHeader = () => {
                   end={item.to === '/'}
                   className={({ isActive }) =>
                     `text-sm font-medium transition-colors ${
-                      isActive ? 'text-tasty-orange' : 'text-foreground hover:text-tasty-orange'
+                      isActive ? 'text-tasty-orange' : 'text-white hover:text-tasty-orange'
                     }`
                   }
                 >
@@ -85,7 +85,7 @@ export const SiteHeader = () => {
 
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="md:hidden text-foreground"
+              className="md:hidden text-white"
               aria-label="Menu"
             >
               {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -101,7 +101,7 @@ export const SiteHeader = () => {
                   end={item.to === '/'}
                   onClick={() => setMobileOpen(false)}
                   className={({ isActive }) =>
-                    `text-sm font-medium ${isActive ? 'text-tasty-orange' : 'text-foreground'}`
+                    `text-sm font-medium ${isActive ? 'text-tasty-orange' : 'text-white'}`
                   }
                 >
                   {item.label}

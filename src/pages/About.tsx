@@ -17,13 +17,13 @@ const About = () => {
   return (
     <Layout>
       <SEO
-        title="Sobre a Tasty — Nossa História e Chefs"
-        description="Conheça a história da Tasty, nossa paixão pela culinária e os chefs por trás das receitas que reúnem famílias e despertam memórias."
+        title="Sobre a Culinária Fitness — Nossa História e Chefs"
+        description="Conheça a história da Culinária Fitness, nossa paixão pela culinária e os chefs por trás das receitas que reúnem famílias e despertam memórias."
         path="/sobre"
       />
       <PageBanner
         title="Sobre"
-        description="Conheça a história da Tasty, nossa paixão pela culinária e os chefs que tornam tudo isso possível."
+        description="Conheça a história da Culinária Fitness, nossa paixão pela culinária e os chefs que tornam tudo isso possível."
         current="Sobre"
       />
 
@@ -38,7 +38,7 @@ const About = () => {
               Sabores que reúnem famílias e despertam memórias.
             </h2>
             <p className="text-tasty-gray text-sm mb-4 leading-relaxed">
-              A Tasty nasceu da paixão por compartilhar receitas autênticas e experiências
+              A Culinária Fitness nasceu da paixão por compartilhar receitas autênticas e experiências
               gastronômicas únicas. Cada prato conta uma história, cada ingrediente carrega
               uma memória.
             </p>
@@ -159,7 +159,7 @@ const About = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-extrabold mb-3 text-tasty-dark">Depoimentos</h2>
             <p className="text-tasty-gray max-w-xl mx-auto text-sm">
-              O que nossa comunidade tem a dizer sobre as receitas e experiências Tasty.
+              O que nossa comunidade tem a dizer sobre as receitas e experiências Culinária Fitness.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
