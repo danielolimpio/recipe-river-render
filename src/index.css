@@ -15,33 +15,33 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 25% 10%;
 
-    --primary: 16 100% 60%;
+    --primary: 142 71% 42%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 24 100% 96%;
+    --secondary: 142 50% 95%;
     --secondary-foreground: 220 25% 10%;
 
-    --muted: 30 20% 96%;
+    --muted: 140 20% 96%;
     --muted-foreground: 220 9% 46%;
 
-    --accent: 24 100% 96%;
-    --accent-foreground: 16 100% 50%;
+    --accent: 142 50% 95%;
+    --accent-foreground: 142 71% 38%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 16 100% 60%;
+    --ring: 142 71% 42%;
 
-    /* Tasty theme tokens */
-    --tasty-orange: 16 100% 60%;
-    --tasty-orange-hover: 16 95% 54%;
-    --tasty-peach: 24 100% 96%;
-    --tasty-dark: 220 25% 10%;
-    --tasty-darker: 220 25% 7%;
+    /* Culinária Fitness theme tokens (keys kept for compatibility) */
+    --tasty-orange: 142 71% 42%;
+    --tasty-orange-hover: 142 75% 36%;
+    --tasty-peach: 142 55% 94%;
+    --tasty-dark: 220 30% 12%;
+    --tasty-darker: 220 30% 8%;
     --tasty-gray: 220 9% 46%;
-    --tasty-light: 30 20% 98%;
+    --tasty-light: 140 20% 98%;
 
     --shadow-card: 0 4px 24px -8px hsl(220 25% 10% / 0.08);
     --shadow-soft: 0 2px 12px -4px hsl(220 25% 10% / 0.06);
@@ -122,14 +122,14 @@
   .page-banner::before {
     top: -20px;
     left: 8%;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='%23ff7849' stroke-width='1.2'><path d='M40 120 Q80 60 140 80 Q180 100 150 150 Q120 180 70 160 Q30 140 40 120 Z'/><path d='M70 100 Q100 90 130 110'/></svg>");
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='%231fb155' stroke-width='1.2'><path d='M40 120 Q80 60 140 80 Q180 100 150 150 Q120 180 70 160 Q30 140 40 120 Z'/><path d='M70 100 Q100 90 130 110'/></svg>");
   }
   .page-banner::after {
     bottom: -30px;
     right: 6%;
     width: 260px;
     height: 260px;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='%23ff7849' stroke-width='1.2'><path d='M100 30 C60 60 40 110 70 160 C100 200 160 170 170 120 C180 70 140 20 100 30 Z'/><path d='M100 40 L100 170'/><path d='M100 80 L70 110'/><path d='M100 110 L130 140'/></svg>");
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='%231fb155' stroke-width='1.2'><path d='M100 30 C60 60 40 110 70 160 C100 200 160 170 170 120 C180 70 140 20 100 30 Z'/><path d='M100 40 L100 170'/><path d='M100 80 L70 110'/><path d='M100 110 L130 140'/></svg>");
   }
 
   .container-tasty {
