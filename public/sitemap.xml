@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://culinariafitness.co/</loc>
+    <loc>https://culinariafitness.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://culinariafitness.co/receitas</loc>
+    <loc>https://culinariafitness.com/receitas</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://culinariafitness.co/sobre</loc>
+    <loc>https://culinariafitness.com/sobre</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://culinariafitness.co/contato</loc>
+    <loc>https://culinariafitness.com/contato</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
