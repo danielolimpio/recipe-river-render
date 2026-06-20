@@ -95,7 +95,7 @@ const Contact = () => {
                 <label htmlFor="contact-message" className="sr-only">Mensagem</label>
                 <Textarea id="contact-message" placeholder="Mensagem *" aria-label="Sua mensagem" rows={5} />
               </div>
-              <Button className="rounded-full bg-tasty-orange hover:bg-tasty-orange-hover text-white px-6 h-11 font-semibold">
+              <Button className="rounded-full bg-gradient-premium text-white px-6 h-11 font-semibold">
                 Enviar Mensagem
               </Button>
             </form>

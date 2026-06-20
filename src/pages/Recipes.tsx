@@ -69,7 +69,7 @@ const Recipes = () => {
                   onClick={() => setPage(i + 1)}
                   className={`w-9 h-9 rounded-md text-sm font-semibold flex items-center justify-center ${
                     page === i + 1
-                      ? 'bg-tasty-orange text-white'
+                      ? 'bg-gradient-premium text-white'
                       : 'bg-transparent text-tasty-dark hover:bg-muted'
                   }`}
                 >

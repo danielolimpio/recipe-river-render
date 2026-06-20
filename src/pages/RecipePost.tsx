@@ -189,7 +189,7 @@ const RecipePost = () => {
                 <Checkbox id="save" />
                 <span>Salvar meu nome, e-mail e site neste navegador para a próxima vez que comentar.</span>
               </label>
-              <Button className="rounded-full bg-tasty-orange hover:bg-tasty-orange-hover text-white px-6 h-11 font-semibold">
+              <Button className="rounded-full bg-gradient-premium text-white px-6 h-11 font-semibold">
                 Publicar Comentário
               </Button>
             </form>
