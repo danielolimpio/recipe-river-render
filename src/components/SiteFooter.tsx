@@ -68,7 +68,7 @@ export const SiteFooter = () => {
           <p className="text-sm text-white/70 mb-4">Fax: (+55) 11 5555-0100</p>
           <p className="text-sm text-white/70">Precisa de ajuda?</p>
           <p className="text-sm">
-            Fale com: <a href="mailto:contato@culinariafitness.co" className="text-tasty-orange hover:underline">contato@culinariafitness.co</a>
+            Fale com: <a href="mailto:contato@culinariafitness.com" className="text-tasty-orange hover:underline">contato@culinariafitness.com</a>
           </p>
         </div>
 

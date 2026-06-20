@@ -79,7 +79,7 @@ export const SiteHeader = () => {
               ))}
             </nav>
 
-            <Button asChild className="hidden md:inline-flex rounded-full bg-tasty-orange hover:bg-tasty-orange-hover text-white px-6 h-10 font-semibold">
+            <Button asChild className="hidden md:inline-flex rounded-full bg-gradient-premium text-white px-6 h-10 font-semibold">
               <Link to="/contato">Enviar Receita</Link>
             </Button>
 
@@ -107,7 +107,7 @@ export const SiteHeader = () => {
                   {item.label}
                 </NavLink>
               ))}
-              <Button asChild className="rounded-full bg-tasty-orange hover:bg-tasty-orange-hover text-white mt-2 w-fit">
+              <Button asChild className="rounded-full bg-gradient-premium text-white mt-2 w-fit">
                 <Link to="/contato">Enviar Receita</Link>
               </Button>
             </nav>

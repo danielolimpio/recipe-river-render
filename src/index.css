@@ -35,9 +35,9 @@
     --ring: 142 71% 42%;
 
     /* Culinaria Fitness header gradient tokens */
-    --tasty-header-start: 142 60% 18%;
-    --tasty-header-end: 142 55% 28%;
-    --tasty-header-accent: 142 80% 65%;
+    --tasty-header-start: 142 70% 35%;
+    --tasty-header-end: 142 75% 45%;
+    --tasty-header-accent: 142 85% 75%;
 
     --tasty-orange: 142 71% 42%;
     --tasty-orange-hover: 142 75% 36%;
@@ -48,6 +48,14 @@
     --tasty-light: 140 20% 98%;
 
     --gradient-header: linear-gradient(180deg, hsl(var(--tasty-header-start)) 0%, hsl(var(--tasty-header-end)) 100%);
+
+    --gradient-premium-start: 142 75% 48%;
+    --gradient-premium-end: 142 70% 38%;
+    --gradient-premium-hover-start: 142 78% 45%;
+    --gradient-premium-hover-end: 142 72% 35%;
+    --gradient-premium-border: 142 80% 70%;
+    --gradient-premium: linear-gradient(135deg, hsl(var(--gradient-premium-start)) 0%, hsl(var(--gradient-premium-end)) 100%);
+    --gradient-premium-hover: linear-gradient(135deg, hsl(var(--gradient-premium-hover-start)) 0%, hsl(var(--gradient-premium-hover-end)) 100%);
 
     --shadow-card: 0 4px 24px -8px hsl(220 25% 10% / 0.08);
     --shadow-soft: 0 2px 12px -4px hsl(220 25% 10% / 0.06);
@@ -149,6 +157,15 @@
   }
   .text-header-accent {
     color: hsl(var(--tasty-header-accent));
+  }
+
+  .bg-gradient-premium {
+    background: var(--gradient-premium);
+    border: 1px solid hsl(var(--gradient-premium-border) / 0.5);
+    box-shadow: inset 0 1px 0 hsl(142 80% 80% / 0.25), 0 4px 14px -4px hsl(var(--tasty-orange) / 0.35);
+  }
+  .bg-gradient-premium:hover {
+    background: var(--gradient-premium-hover);
   }
 
   .line-clamp-2 {

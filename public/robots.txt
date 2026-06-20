@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://culinariafitness.co/sitemap.xml
+Sitemap: https://culinariafitness.com/sitemap.xml

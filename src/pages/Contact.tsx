@@ -35,7 +35,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             { icon: MapPin, title: 'Endereço', lines: ['Rua das Flores, 123', 'São Paulo - SP, Brasil'] },
-            { icon: Send, title: 'E-mail', lines: ['contato@culinariafitness.co', 'parceria@culinariafitness.co'] },
+            { icon: Send, title: 'E-mail', lines: ['contato@culinariafitness.com', 'parceria@culinariafitness.com'] },
             { icon: Phone, title: 'Telefone', lines: ['(+55) 11 5555-1212', '(+55) 11 5555-0100'] },
           ].map(({ icon: Icon, title, lines }) => (
             <div key={title} className="bg-white shadow-card rounded-md py-10 px-8 text-center">
@@ -63,7 +63,7 @@ const Contact = () => {
               {[
                 { q: 'Como envio minha receita para o site?', a: 'Use o formulário ao lado ou clique em "Enviar Receita" no topo. Nossa equipe avaliará em até 5 dias úteis.' },
                 { q: 'As receitas têm versões sem glúten ou veganas?', a: 'Sim! Muitas receitas trazem variações e dicas para substituições. Basta filtrar pela categoria desejada.' },
-                { q: 'Posso colaborar como chef parceiro?', a: 'Adoramos novas parcerias. Envie um e-mail para parceria@culinariafitness.co com seu portfólio.' },
+                { q: 'Posso colaborar como chef parceiro?', a: 'Adoramos novas parcerias. Envie um e-mail para parceria@culinariafitness.com com seu portfólio.' },
               ].map((item, i) => (
                 <AccordionItem key={i} value={`item-${i}`} className="border-border">
                   <AccordionTrigger className="text-left font-bold text-tasty-dark hover:no-underline">
@@ -95,7 +95,7 @@ const Contact = () => {
                 <label htmlFor="contact-message" className="sr-only">Mensagem</label>
                 <Textarea id="contact-message" placeholder="Mensagem *" aria-label="Sua mensagem" rows={5} />
               </div>
-              <Button className="rounded-full bg-tasty-orange hover:bg-tasty-orange-hover text-white px-6 h-11 font-semibold">
+              <Button className="rounded-full bg-gradient-premium text-white px-6 h-11 font-semibold">
                 Enviar Mensagem
               </Button>
             </form>
