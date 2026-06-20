@@ -34,7 +34,11 @@
     --input: 220 13% 91%;
     --ring: 142 71% 42%;
 
-    /* Culinária Fitness theme tokens (keys kept for compatibility) */
+    /* Culinaria Fitness header gradient tokens */
+    --tasty-header-start: 142 60% 18%;
+    --tasty-header-end: 142 55% 28%;
+    --tasty-header-accent: 142 80% 65%;
+
     --tasty-orange: 142 71% 42%;
     --tasty-orange-hover: 142 75% 36%;
     --tasty-peach: 142 55% 94%;
@@ -42,6 +46,8 @@
     --tasty-darker: 220 30% 8%;
     --tasty-gray: 220 9% 46%;
     --tasty-light: 140 20% 98%;
+
+    --gradient-header: linear-gradient(180deg, hsl(var(--tasty-header-start)) 0%, hsl(var(--tasty-header-end)) 100%);
 
     --shadow-card: 0 4px 24px -8px hsl(220 25% 10% / 0.08);
     --shadow-soft: 0 2px 12px -4px hsl(220 25% 10% / 0.06);
@@ -138,6 +144,13 @@
 }
 
 @layer utilities {
+  .bg-header-gradient {
+    background: var(--gradient-header);
+  }
+  .text-header-accent {
+    color: hsl(var(--tasty-header-accent));
+  }
+
   .line-clamp-2 {
     display: -webkit-box;
     -webkit-line-clamp: 2;
