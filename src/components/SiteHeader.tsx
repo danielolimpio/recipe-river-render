@@ -17,13 +17,13 @@ export const SiteHeader = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="bg-tasty-dark text-white border-b border-white/10 sticky top-0 z-50">
+    <header className="bg-header-gradient text-white border-b border-white/10 sticky top-0 z-50">
       {/* Top bar */}
       <div className="container-tasty">
         <div className="flex items-center justify-between h-20">
           <button
             onClick={() => setSearchOpen(!searchOpen)}
-            className="text-white/70 hover:text-tasty-orange transition-colors"
+            className="text-white/80 hover:text-white transition-colors"
             aria-label="Buscar"
           >
             <Search className="h-[18px] w-[18px]" />
@@ -33,7 +33,7 @@ export const SiteHeader = () => {
             <img src={logo} alt="Culinária Fitness" className="h-12 md:h-14 w-auto" />
           </Link>
 
-          <button className="text-white/70 hover:text-tasty-orange transition-colors" aria-label="Conta">
+          <button className="text-white/80 hover:text-white transition-colors" aria-label="Conta">
             <User className="h-[18px] w-[18px]" />
           </button>
         </div>
@@ -50,14 +50,14 @@ export const SiteHeader = () => {
       <div className="border-t border-white/10">
         <div className="container-tasty">
           <div className="flex items-center justify-between h-14 relative">
-            <div className="hidden md:flex items-center gap-4 text-white/60">
-              <a href="#" aria-label="Facebook" className="hover:text-tasty-orange transition-colors">
+            <div className="hidden md:flex items-center gap-4 text-white/70">
+              <a href="#" aria-label="Facebook" className="hover:text-white transition-colors">
                 <Facebook className="h-4 w-4" />
               </a>
-              <a href="#" aria-label="Twitter" className="hover:text-tasty-orange transition-colors">
+              <a href="#" aria-label="Twitter" className="hover:text-white transition-colors">
                 <Twitter className="h-4 w-4" />
               </a>
-              <a href="#" aria-label="Instagram" className="hover:text-tasty-orange transition-colors">
+              <a href="#" aria-label="Instagram" className="hover:text-white transition-colors">
                 <Instagram className="h-4 w-4" />
               </a>
             </div>
