@@ -147,6 +147,9 @@
   .bg-header-gradient {
     background: var(--gradient-header);
   }
+  .text-header-accent {
+    color: hsl(var(--tasty-header-accent));
+  }
 
   .line-clamp-2 {
     display: -webkit-box;

@@ -70,7 +70,7 @@ export const SiteHeader = () => {
                   end={item.to === '/'}
                   className={({ isActive }) =>
                     `text-sm font-medium transition-colors ${
-                      isActive ? 'text-tasty-orange' : 'text-white hover:text-tasty-orange'
+                      isActive ? 'text-header-accent' : 'text-white/90 hover:text-white'
                     }`
                   }
                 >
@@ -101,7 +101,7 @@ export const SiteHeader = () => {
                   end={item.to === '/'}
                   onClick={() => setMobileOpen(false)}
                   className={({ isActive }) =>
-                    `text-sm font-medium ${isActive ? 'text-tasty-orange' : 'text-white'}`
+                    `text-sm font-medium ${isActive ? 'text-header-accent' : 'text-white/90 hover:text-white'}`
                   }
                 >
                   {item.label}
