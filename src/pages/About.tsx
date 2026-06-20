@@ -84,7 +84,7 @@ const About = () => {
             <p className="text-tasty-gray text-sm mb-7 leading-relaxed">
               Workshops temáticos, jantares ao vivo e cursos completos disponíveis durante o ano todo.
             </p>
-            <Button asChild className="rounded-full bg-tasty-orange hover:bg-tasty-orange-hover text-white px-6 h-11 font-semibold">
+            <Button asChild className="rounded-full bg-gradient-premium text-white px-6 h-11 font-semibold">
               <Link to="/receitas">Explorar Receitas</Link>
             </Button>
           </div>
@@ -114,7 +114,7 @@ const About = () => {
                   <p className="text-tasty-gray text-sm mb-4">{c.role}</p>
                   <div className="flex items-center justify-center gap-2">
                     {socials.map(({ Icon, label }) => (
-                      <a key={label} href="#" aria-label={`${label} de ${c.name}`} className="w-8 h-8 rounded-full bg-tasty-orange text-white flex items-center justify-center hover:bg-tasty-orange-hover">
+                      <a key={label} href="#" aria-label={`${label} de ${c.name}`} className="w-8 h-8 rounded-full bg-gradient-premium text-white flex items-center justify-center">
                         <Icon className="h-4 w-4" />
                       </a>
                     ))}
@@ -145,7 +145,7 @@ const About = () => {
                 <h3 className="text-3xl md:text-5xl font-extrabold mb-2">Receitas da Vovó</h3>
                 <p className="text-white/80 text-sm max-w-md">Reviva a tradição com receitas trazidas direto da cozinha dela.</p>
               </div>
-              <Button className="rounded-full bg-tasty-orange hover:bg-tasty-orange-hover text-white px-6 h-11 font-semibold shrink-0">
+              <Button className="rounded-full bg-gradient-premium text-white px-6 h-11 font-semibold shrink-0">
                 Ver Todas as Receitas
               </Button>
             </div>
@@ -185,7 +185,7 @@ const About = () => {
             <form className="flex flex-col sm:flex-row gap-3">
               <label htmlFor="about-newsletter-email" className="sr-only">E-mail para newsletter</label>
               <Input id="about-newsletter-email" type="email" placeholder="Seu melhor e-mail" aria-label="E-mail para newsletter" className="rounded-full h-11" />
-              <Button className="rounded-full bg-tasty-orange hover:bg-tasty-orange-hover text-white px-6 h-11 font-semibold">
+              <Button className="rounded-full bg-gradient-premium text-white px-6 h-11 font-semibold">
                 Inscrever-se
               </Button>
             </form>
