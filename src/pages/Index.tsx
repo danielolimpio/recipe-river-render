@@ -53,7 +53,7 @@ const Index = () => {
               Uma receita irresistível para toda a família.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Button asChild className="rounded-full bg-tasty-orange hover:bg-tasty-orange-hover text-white px-6 h-11 font-semibold">
+              <Button asChild className="rounded-full bg-gradient-premium text-white px-6 h-11 font-semibold">
                 <Link to={`/receita/${heroRecipe.slug}`}>Ler Mais</Link>
               </Button>
               <Button asChild variant="outline" className="rounded-full border-tasty-dark/20 hover:bg-tasty-dark hover:text-white px-6 h-11 font-semibold">
@@ -86,7 +86,7 @@ const Index = () => {
             ))}
           </div>
           <div className="text-center mt-12">
-            <Button asChild className="rounded-full bg-tasty-orange hover:bg-tasty-orange-hover text-white px-7 h-11 font-semibold">
+            <Button asChild className="rounded-full bg-gradient-premium text-white px-7 h-11 font-semibold">
               <Link to="/receitas">Mais Receitas</Link>
             </Button>
           </div>
@@ -183,7 +183,7 @@ const Index = () => {
                   <p className="text-tasty-gray text-sm mb-4">{c.role}</p>
                   <div className="flex items-center justify-center gap-2">
                     {socials.map(({ Icon, label }) => (
-                      <a key={label} href="#" aria-label={`${label} de ${c.name}`} className="w-8 h-8 rounded-full bg-tasty-orange text-white flex items-center justify-center hover:bg-tasty-orange-hover">
+                      <a key={label} href="#" aria-label={`${label} de ${c.name}`} className="w-8 h-8 rounded-full bg-gradient-premium text-white flex items-center justify-center">
                         <Icon className="h-4 w-4" />
                       </a>
                     ))}
@@ -239,7 +239,7 @@ const Index = () => {
             <form className="flex flex-col sm:flex-row gap-3">
               <label htmlFor="newsletter-email" className="sr-only">E-mail para newsletter</label>
               <Input id="newsletter-email" type="email" placeholder="Seu melhor e-mail" aria-label="E-mail para newsletter" className="rounded-full h-11" />
-              <Button className="rounded-full bg-tasty-orange hover:bg-tasty-orange-hover text-white px-6 h-11 font-semibold">
+              <Button className="rounded-full bg-gradient-premium text-white px-6 h-11 font-semibold">
                 Inscrever-se
               </Button>
             </form>
