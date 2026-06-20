@@ -159,6 +159,15 @@
     color: hsl(var(--tasty-header-accent));
   }
 
+  .bg-gradient-premium {
+    background: var(--gradient-premium);
+    border: 1px solid hsl(var(--gradient-premium-border) / 0.5);
+    box-shadow: inset 0 1px 0 hsl(142 80% 80% / 0.25), 0 4px 14px -4px hsl(var(--tasty-orange) / 0.35);
+  }
+  .bg-gradient-premium:hover {
+    background: var(--gradient-premium-hover);
+  }
+
   .line-clamp-2 {
     display: -webkit-box;
     -webkit-line-clamp: 2;
