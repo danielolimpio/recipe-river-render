@@ -138,6 +138,100 @@ const RecipePost = () => {
             </div>
           </div>
 
+          {/* Benefícios Nutricionais por Ingrediente */}
+          {recipe.nutritionalBenefits && recipe.nutritionalBenefits.length > 0 && (
+            <div className="mb-12">
+              <h2 className="text-2xl font-extrabold text-tasty-dark mb-4">
+                Resumo de Benefícios Nutricionais por Ingrediente
+              </h2>
+              <div className="border border-border rounded-md overflow-hidden">
+                <table className="w-full text-sm">
+                  <thead className="bg-tasty-peach/50">
+                    <tr>
+                      <th className="text-left p-3 font-extrabold text-tasty-dark">Ingrediente</th>
+                      <th className="text-left p-3 font-extrabold text-tasty-dark">Benefícios Nutricionais</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {recipe.nutritionalBenefits.map((b, i) => (
+                      <tr key={i} className="border-t border-border">
+                        <td className="p-3 font-semibold text-tasty-dark align-top w-1/3">{b.ingredient}</td>
+                        <td className="p-3 text-tasty-gray">{b.benefit}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {/* Tabela Nutricional */}
+          {recipe.nutritionalTable && recipe.nutritionalTable.length > 0 && (
+            <div className="mb-12">
+              <h2 className="text-2xl font-extrabold text-tasty-dark mb-4">
+                Tabela Nutricional <span className="text-sm font-normal text-tasty-gray">(por unidade de 100g, recheio variado)</span>
+              </h2>
+              <div className="border border-border rounded-md overflow-hidden max-w-md">
+                <table className="w-full text-sm">
+                  <thead className="bg-tasty-peach/50">
+                    <tr>
+                      <th className="text-left p-3 font-extrabold text-tasty-dark">Nutriente</th>
+                      <th className="text-left p-3 font-extrabold text-tasty-dark">Quantidade</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {recipe.nutritionalTable.map((n, i) => (
+                      <tr key={i} className="border-t border-border">
+                        <td className="p-3 font-semibold text-tasty-dark">{n.nutrient}</td>
+                        <td className="p-3 text-tasty-gray">{n.quantity}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {/* Diferenciação */}
+          {recipe.differentiation && recipe.differentiation.length > 0 && (
+            <div className="mb-12">
+              <h2 className="text-2xl font-extrabold text-tasty-dark mb-4">Diferenciação da Receita Fitness</h2>
+              <div className="space-y-3 text-sm text-tasty-dark leading-relaxed">
+                {recipe.differentiation.map((p, i) => {
+                  const isHeading = p.startsWith('**') && p.endsWith('**');
+                  if (isHeading) return <h3 key={i} className="font-extrabold text-tasty-dark mt-4">{p.slice(2,-2)}</h3>;
+                  if (p.startsWith('•')) return <p key={i} className="pl-4">{p}</p>;
+                  return <p key={i}>{p}</p>;
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Empreendendo */}
+          {recipe.entrepreneurship && recipe.entrepreneurship.length > 0 && (
+            <div className="mb-12 bg-tasty-peach/30 border border-border rounded-md p-6">
+              <h2 className="text-2xl font-extrabold text-tasty-dark mb-4">Empreendendo com Esta Receita</h2>
+              <div className="space-y-2 text-sm text-tasty-dark leading-relaxed">
+                {recipe.entrepreneurship.map((p, i) => {
+                  const isHeading = p.startsWith('**') && p.endsWith('**');
+                  if (isHeading) return <h3 key={i} className="font-extrabold text-tasty-dark mt-4 text-base">{p.slice(2,-2)}</h3>;
+                  if (p.startsWith('•')) return <p key={i} className="pl-4">{p}</p>;
+                  return <p key={i}>{p}</p>;
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* História */}
+          {recipe.history && recipe.history.length > 0 && (
+            <div className="mb-12">
+              <h2 className="text-2xl font-extrabold text-tasty-dark mb-4">Resumo Histórico</h2>
+              <div className="space-y-3 text-sm text-tasty-dark leading-relaxed">
+                {recipe.history.map((p, i) => <p key={i}>{p}</p>)}
+              </div>
+            </div>
+          )}
+
           <p className="text-tasty-orange text-sm leading-relaxed mb-12">
             Sirva acompanhada de uma bebida refrescante e desfrute deste prato em boa companhia.
             Não esqueça de compartilhar a sua versão com a gente nas redes sociais usando #Culinária FitnessBrasil.
