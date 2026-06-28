@@ -5,7 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
-import { Printer, Clock, Users, Flame, ChefHat } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { Printer, Clock, Users, Flame, ChefHat, Leaf, Sparkles, TrendingUp, BookOpen, Apple, Award, Heart, Zap } from 'lucide-react';
 import { recipes } from '@/data/recipes';
 
 const RecipePost = () => {
