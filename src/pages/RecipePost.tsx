@@ -5,7 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
-import { Printer, Clock, Users, Flame, ChefHat } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { Printer, Clock, Users, Flame, ChefHat, Leaf, Sparkles, TrendingUp, BookOpen, Apple, Award, Heart, Zap } from 'lucide-react';
 import { recipes } from '@/data/recipes';
 
 const RecipePost = () => {
@@ -138,99 +139,159 @@ const RecipePost = () => {
             </div>
           </div>
 
+          {/* SectionHeading helper (inline component) */}
+          {(() => null)()}
+
           {/* Benefícios Nutricionais por Ingrediente */}
           {recipe.nutritionalBenefits && recipe.nutritionalBenefits.length > 0 && (
-            <div className="mb-12">
-              <h2 className="text-2xl font-extrabold text-tasty-dark mb-4">
+            <section className="mb-14">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-premium text-white shadow-md">
+                  <Leaf className="h-5 w-5" />
+                </span>
+                <Badge className="bg-tasty-peach/70 text-tasty-dark hover:bg-tasty-peach/70 border-0 uppercase tracking-wider text-[10px] font-bold">Nutrição Inteligente</Badge>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-extrabold text-tasty-dark mb-1">
                 Resumo de Benefícios Nutricionais por Ingrediente
               </h2>
-              <div className="border border-border rounded-md overflow-hidden">
-                <table className="w-full text-sm">
-                  <thead className="bg-tasty-peach/50">
-                    <tr>
-                      <th className="text-left p-3 font-extrabold text-tasty-dark">Ingrediente</th>
-                      <th className="text-left p-3 font-extrabold text-tasty-dark">Benefícios Nutricionais</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {recipe.nutritionalBenefits.map((b, i) => (
-                      <tr key={i} className="border-t border-border">
-                        <td className="p-3 font-semibold text-tasty-dark align-top w-1/3">{b.ingredient}</td>
-                        <td className="p-3 text-tasty-gray">{b.benefit}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+              <div className="h-1 w-16 bg-gradient-premium rounded-full mb-6" />
+              <div className="grid sm:grid-cols-2 gap-4">
+                {recipe.nutritionalBenefits.map((b, i) => (
+                  <div
+                    key={i}
+                    className="group relative border-2 border-border hover:border-primary/40 rounded-xl p-5 bg-card transition-all hover:shadow-lg"
+                  >
+                    <div className="absolute -top-3 -left-3 w-9 h-9 rounded-full bg-gradient-premium text-white flex items-center justify-center shadow-md">
+                      <Apple className="h-4 w-4" />
+                    </div>
+                    <div className="pl-6">
+                      <h4 className="font-extrabold text-tasty-dark mb-1 text-base">{b.ingredient}</h4>
+                      <p className="text-sm text-tasty-gray leading-relaxed">{b.benefit}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            </div>
+            </section>
           )}
 
           {/* Tabela Nutricional */}
           {recipe.nutritionalTable && recipe.nutritionalTable.length > 0 && (
-            <div className="mb-12">
-              <h2 className="text-2xl font-extrabold text-tasty-dark mb-4">
-                Tabela Nutricional <span className="text-sm font-normal text-tasty-gray">(por unidade de 100g, recheio variado)</span>
-              </h2>
-              <div className="border border-border rounded-md overflow-hidden max-w-md">
-                <table className="w-full text-sm">
-                  <thead className="bg-tasty-peach/50">
-                    <tr>
-                      <th className="text-left p-3 font-extrabold text-tasty-dark">Nutriente</th>
-                      <th className="text-left p-3 font-extrabold text-tasty-dark">Quantidade</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {recipe.nutritionalTable.map((n, i) => (
-                      <tr key={i} className="border-t border-border">
-                        <td className="p-3 font-semibold text-tasty-dark">{n.nutrient}</td>
-                        <td className="p-3 text-tasty-gray">{n.quantity}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+            <section className="mb-14">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-premium text-white shadow-md">
+                  <Flame className="h-5 w-5" />
+                </span>
+                <Badge className="bg-tasty-peach/70 text-tasty-dark hover:bg-tasty-peach/70 border-0 uppercase tracking-wider text-[10px] font-bold">Informação Nutricional</Badge>
               </div>
-            </div>
+              <h2 className="text-2xl md:text-3xl font-extrabold text-tasty-dark mb-1">
+                Tabela Nutricional
+              </h2>
+              <div className="h-1 w-16 bg-gradient-premium rounded-full mb-6" />
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                {recipe.nutritionalTable.map((n, i) => (
+                  <div
+                    key={i}
+                    className="text-center border-2 border-border rounded-xl p-4 bg-gradient-to-b from-tasty-peach/20 to-card hover:shadow-md transition-shadow"
+                  >
+                    <div className="text-[10px] uppercase tracking-wider text-tasty-gray font-bold mb-1">{n.nutrient}</div>
+                    <div className="text-lg font-extrabold text-tasty-dark">{n.quantity}</div>
+                  </div>
+                ))}
+              </div>
+            </section>
           )}
 
           {/* Diferenciação */}
           {recipe.differentiation && recipe.differentiation.length > 0 && (
-            <div className="mb-12">
-              <h2 className="text-2xl font-extrabold text-tasty-dark mb-4">Diferenciação da Receita Fitness</h2>
-              <div className="space-y-3 text-sm text-tasty-dark leading-relaxed">
-                {recipe.differentiation.map((p, i) => {
-                  const isHeading = p.startsWith('**') && p.endsWith('**');
-                  if (isHeading) return <h3 key={i} className="font-extrabold text-tasty-dark mt-4">{p.slice(2,-2)}</h3>;
-                  if (p.startsWith('•')) return <p key={i} className="pl-4">{p}</p>;
-                  return <p key={i}>{p}</p>;
-                })}
+            <section className="mb-14">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-premium text-white shadow-md">
+                  <Sparkles className="h-5 w-5" />
+                </span>
+                <Badge className="bg-tasty-peach/70 text-tasty-dark hover:bg-tasty-peach/70 border-0 uppercase tracking-wider text-[10px] font-bold">Exclusivo Fitness</Badge>
               </div>
-            </div>
+              <h2 className="text-2xl md:text-3xl font-extrabold text-tasty-dark mb-1">Diferenciação da Receita Fitness</h2>
+              <div className="h-1 w-16 bg-gradient-premium rounded-full mb-6" />
+              <div className="relative border-2 border-border rounded-xl p-6 bg-card">
+                <span className="absolute -top-3 left-6 bg-card px-2 text-primary"><Award className="h-5 w-5" /></span>
+                <div className="space-y-3 text-sm text-tasty-dark leading-relaxed">
+                  {recipe.differentiation.map((p, i) => {
+                    const isHeading = p.startsWith('**') && p.endsWith('**');
+                    if (isHeading) return (
+                      <h3 key={i} className="font-extrabold text-tasty-dark mt-4 text-base flex items-center gap-2">
+                        <Zap className="h-4 w-4 text-primary" />
+                        {p.slice(2,-2)}
+                      </h3>
+                    );
+                    if (p.startsWith('•')) return (
+                      <p key={i} className="flex gap-2 pl-2">
+                        <span className="text-primary font-bold shrink-0">›</span>
+                        <span>{p.replace(/^•\s*/, '')}</span>
+                      </p>
+                    );
+                    return <p key={i}>{p}</p>;
+                  })}
+                </div>
+              </div>
+            </section>
           )}
 
           {/* Empreendendo */}
           {recipe.entrepreneurship && recipe.entrepreneurship.length > 0 && (
-            <div className="mb-12 bg-tasty-peach/30 border border-border rounded-md p-6">
-              <h2 className="text-2xl font-extrabold text-tasty-dark mb-4">Empreendendo com Esta Receita</h2>
-              <div className="space-y-2 text-sm text-tasty-dark leading-relaxed">
-                {recipe.entrepreneurship.map((p, i) => {
-                  const isHeading = p.startsWith('**') && p.endsWith('**');
-                  if (isHeading) return <h3 key={i} className="font-extrabold text-tasty-dark mt-4 text-base">{p.slice(2,-2)}</h3>;
-                  if (p.startsWith('•')) return <p key={i} className="pl-4">{p}</p>;
-                  return <p key={i}>{p}</p>;
-                })}
+            <section className="mb-14">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-premium text-white shadow-md">
+                  <TrendingUp className="h-5 w-5" />
+                </span>
+                <Badge className="bg-tasty-peach/70 text-tasty-dark hover:bg-tasty-peach/70 border-0 uppercase tracking-wider text-[10px] font-bold">Negócio Fitness</Badge>
               </div>
-            </div>
+              <h2 className="text-2xl md:text-3xl font-extrabold text-tasty-dark mb-1">Empreendendo com Esta Receita</h2>
+              <div className="h-1 w-16 bg-gradient-premium rounded-full mb-6" />
+              <div className="rounded-xl border-2 border-primary/20 bg-gradient-to-br from-tasty-peach/40 via-card to-card p-6 shadow-sm">
+                <div className="space-y-2 text-sm text-tasty-dark leading-relaxed">
+                  {recipe.entrepreneurship.map((p, i) => {
+                    const isHeading = p.startsWith('**') && p.endsWith('**');
+                    if (isHeading) return (
+                      <div key={i} className="mt-5 first:mt-0">
+                        <h3 className="font-extrabold text-tasty-dark text-base flex items-center gap-2">
+                          <span className="inline-flex items-center justify-center w-6 h-6 rounded-md bg-gradient-premium text-white">
+                            <Sparkles className="h-3.5 w-3.5" />
+                          </span>
+                          {p.slice(2,-2)}
+                        </h3>
+                        <div className="h-px bg-border mt-2" />
+                      </div>
+                    );
+                    if (p.startsWith('•')) return (
+                      <p key={i} className="flex gap-2 pl-2">
+                        <Heart className="h-3.5 w-3.5 text-primary shrink-0 mt-1" />
+                        <span>{p.replace(/^•\s*/, '')}</span>
+                      </p>
+                    );
+                    return <p key={i}>{p}</p>;
+                  })}
+                </div>
+              </div>
+            </section>
           )}
 
           {/* História */}
           {recipe.history && recipe.history.length > 0 && (
-            <div className="mb-12">
-              <h2 className="text-2xl font-extrabold text-tasty-dark mb-4">Resumo Histórico</h2>
-              <div className="space-y-3 text-sm text-tasty-dark leading-relaxed">
+            <section className="mb-14">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-premium text-white shadow-md">
+                  <BookOpen className="h-5 w-5" />
+                </span>
+                <Badge className="bg-tasty-peach/70 text-tasty-dark hover:bg-tasty-peach/70 border-0 uppercase tracking-wider text-[10px] font-bold">Origem & Tradição</Badge>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-extrabold text-tasty-dark mb-1">Resumo Histórico</h2>
+              <div className="h-1 w-16 bg-gradient-premium rounded-full mb-6" />
+              <div className="relative border-l-4 border-primary pl-6 py-2 space-y-3 text-sm text-tasty-dark leading-relaxed bg-tasty-peach/20 rounded-r-xl pr-4">
                 {recipe.history.map((p, i) => <p key={i}>{p}</p>)}
               </div>
-            </div>
+            </section>
           )}
+
 
           <p className="text-tasty-orange text-sm leading-relaxed mb-12">
             Sirva acompanhada de uma bebida refrescante e desfrute deste prato em boa companhia.
