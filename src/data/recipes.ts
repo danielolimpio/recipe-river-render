@@ -580,7 +580,7 @@ export const recipes: Recipe[] = [
   },
 ];
 
-export const trendingRecipes = recipes.slice(0, 4).map((r) => ({ title: r.title, image: r.image }));
+export const trendingRecipes = recipes.slice(0, 4).map((r) => ({ title: r.title, image: r.image, slug: r.slug }));
 
 export const chefs = [
   { name: 'Nick Paterson', role: 'Chef Executivo', avatar: 'https://images.unsplash.com/photo-1583394293214-28ded15ee548?w=300&h=300&fit=crop' },
