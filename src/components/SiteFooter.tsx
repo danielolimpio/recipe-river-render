@@ -17,10 +17,14 @@ export const SiteFooter = () => {
             </div>
             <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {trendingRecipes.map((r) => (
-                <div key={r.title} className="flex items-center gap-3 min-w-0">
+                <Link
+                  key={r.title}
+                  to={`/receita/${r.slug}`}
+                  className="flex items-center gap-3 min-w-0 group"
+                >
                   <img src={r.image} alt={r.title} className="w-10 h-10 rounded-full object-cover shrink-0" />
-                  <p className="text-sm font-medium line-clamp-2">{r.title}</p>
-                </div>
+                  <p className="text-sm font-medium line-clamp-2 group-hover:text-tasty-orange transition-colors">{r.title}</p>
+                </Link>
               ))}
             </div>
             <div className="hidden lg:flex items-center gap-2 shrink-0">
@@ -41,23 +45,21 @@ export const SiteFooter = () => {
           <img src="/logo-culinaria-fitness.png" alt="Culinária Fitness" className="h-12 w-auto mb-5 brightness-0 invert" />
           <h4 className="font-extrabold text-base mb-5">Conheça a Culinária Fitness</h4>
           <ul className="space-y-3 text-sm text-white/70">
-            <li><Link to="/sobre" className="hover:text-tasty-orange">Introdução</Link></li>
+            <li><Link to="/" className="hover:text-tasty-orange">Início</Link></li>
             <li><Link to="/receitas" className="hover:text-tasty-orange">Receitas</Link></li>
-            <li><Link to="/sobre" className="hover:text-tasty-orange">Nossos Chefs</Link></li>
-            <li><a href="#" className="hover:text-tasty-orange">Planos</a></li>
-            <li><a href="#" className="hover:text-tasty-orange">Roadmap</a></li>
+            <li><Link to="/sobre" className="hover:text-tasty-orange">Sobre Nós</Link></li>
+            <li><Link to="/contato" className="hover:text-tasty-orange">Contato</Link></li>
           </ul>
         </div>
 
         <div>
           <h4 className="font-extrabold text-base mb-5">Links Úteis</h4>
           <ul className="space-y-3 text-sm text-white/70">
-            <li><Link to="/sobre" className="hover:text-tasty-orange">Introdução</Link></li>
-            <li><Link to="/sobre" className="hover:text-tasty-orange">Sobre Nós</Link></li>
-            <li><a href="#" className="hover:text-tasty-orange">Funcionalidades</a></li>
-            <li><a href="#" className="hover:text-tasty-orange">Política de Cookies</a></li>
-            <li><a href="#" className="hover:text-tasty-orange">Política de Privacidade</a></li>
-            <li><a href="#" className="hover:text-tasty-orange">Termos e Condições</a></li>
+            <li><Link to="/" className="hover:text-tasty-orange">Início</Link></li>
+            <li><Link to="/contato" className="hover:text-tasty-orange">Contato</Link></li>
+            <li><Link to="/politica-de-cookies" className="hover:text-tasty-orange">Política de Cookies</Link></li>
+            <li><Link to="/politica-de-privacidade" className="hover:text-tasty-orange">Política de Privacidade</Link></li>
+            <li><Link to="/termos-e-condicoes" className="hover:text-tasty-orange">Termos e Condições</Link></li>
           </ul>
         </div>
 
