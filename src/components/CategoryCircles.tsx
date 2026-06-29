@@ -35,15 +35,15 @@ export const CategoryCircles = () => {
             <li key={cat.name}>
               <Link
                 to={`/receitas?categoria=${encodeURIComponent(cat.name)}`}
-                className="group flex flex-col items-center gap-2 w-24 md:w-28"
+                className="group flex flex-col items-center gap-2 w-16 md:w-20"
               >
-                <span className="relative inline-block rounded-full p-[3px] bg-gradient-premium transition-transform duration-300 group-hover:scale-105">
-                  <span className="block rounded-full overflow-hidden bg-white p-[2px]">
+                <span className="relative inline-block rounded-full p-[2px] bg-gradient-premium transition-transform duration-300 group-hover:scale-105">
+                  <span className="block rounded-full overflow-hidden bg-white p-[1px]">
                     <img
                       src={cat.image}
                       alt={cat.name}
                       loading="lazy"
-                      className="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover"
+                      className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover"
                     />
                   </span>
                 </span>
