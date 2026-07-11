@@ -112,15 +112,15 @@ const Index = () => {
               Explore as nossas categorias e encontre a inspiração ideal para a sua próxima refeição.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
             {categoryFeature.map((cat) => (
               <Link
                 to={`/receitas?categoria=${encodeURIComponent(cat.name)}`}
                 key={cat.name}
-                className="group relative aspect-square rounded-md overflow-hidden"
+                className="group relative aspect-square rounded-md overflow-hidden bg-tasty-peach/40"
                 aria-label={`Ver receitas da categoria ${cat.name}`}
               >
-                <img src={cat.image} alt={`Categoria ${cat.name}`} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <img src={cat.image} alt={`Categoria ${cat.name}`} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                 <span className="absolute bottom-4 left-4 text-white font-extrabold text-lg">{cat.name}</span>
               </Link>
