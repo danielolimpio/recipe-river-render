@@ -70,10 +70,12 @@ const Index = () => {
             </div>
           </div>
           <div className="relative">
-            <img
-              src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=900&h=900&fit=crop"
-              alt="Pilha de panquecas fofas com mirtilos frescos e calda"
-              className="w-full aspect-square object-cover rounded-md shadow-card"
+            <SmartImage
+              src={heroPanqueca.url}
+              alt="Pilha de panquecas fitness fofas com mirtilos frescos e calda"
+              eager
+              wrapperClassName="w-full aspect-square rounded-md shadow-card"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
