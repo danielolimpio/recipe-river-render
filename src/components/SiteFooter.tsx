@@ -22,7 +22,7 @@ export const SiteFooter = () => {
                   to={`/receita/${r.slug}`}
                   className="flex items-center gap-3 min-w-0 group"
                 >
-                  <img src={r.image} alt={r.title} className="w-10 h-10 rounded-full object-cover shrink-0" />
+                  <img src={r.image} alt={r.title} loading="lazy" decoding="async" className="w-10 h-10 rounded-full object-cover shrink-0 bg-white/10" />
                   <p className="text-sm font-medium line-clamp-2 group-hover:text-tasty-orange transition-colors">{r.title}</p>
                 </Link>
               ))}

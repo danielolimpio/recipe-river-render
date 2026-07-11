@@ -1,20 +1,28 @@
 import { Link } from 'react-router-dom';
-import { Clock, ChevronRight, Apple, Smartphone, Facebook, Twitter, Youtube, Award } from 'lucide-react';
+import { Clock, Apple, Smartphone, Facebook, Twitter, Youtube, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Layout } from '@/components/Layout';
 import { SEO } from '@/components/SEO';
 import { RecipeCard } from '@/components/RecipeCard';
-import { recipes, chefs, categories } from '@/data/recipes';
+import { SmartImage } from '@/components/SmartImage';
+import { recipes, chefs } from '@/data/recipes';
+import heroPanqueca from '@/assets/recipes/panqueca-fitness-leve-versatil-e-deliciosa.webp.asset.json';
+import catCafe from '@/assets/recipes/como-fazer-waffles-fit-com-whey-protein.webp.asset.json';
+import catAlmoco from '@/assets/recipes/frango-xadrez-fitness-um-classico-oriental-com-um-toque-saudavel.webp.asset.json';
+import catLanche from '@/assets/recipes/pao-de-queijo-de-tapioca-leveza-e-sabor-em-cada-mordida.webp.asset.json';
+import catSobremesa from '@/assets/recipes/receita-completa-de-bolo-de-chocolate-fitness.webp.asset.json';
+import catBebida from '@/assets/recipes/shake-de-acai-com-banana-e-granola.webp.asset.json';
 
-const heroRecipe = recipes[7]; // panquecas
+const heroRecipe = recipes.find((r) => r.slug.startsWith('panqueca')) ?? recipes[0];
 const weekRecipes = recipes.slice(0, 6);
 
 const categoryFeature = [
-  { name: 'Doces', image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&h=600&fit=crop' },
-  { name: 'Hambúrgueres', image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&h=600&fit=crop' },
-  { name: 'Bebidas', image: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&h=600&fit=crop' },
-  { name: 'Pizzas', image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=600&fit=crop' },
+  { name: 'Café da Manhã', image: catCafe.url },
+  { name: 'Almoço e Jantar', image: catAlmoco.url },
+  { name: 'Lanche da Tarde', image: catLanche.url },
+  { name: 'Sobremesas Fit', image: catSobremesa.url },
+  { name: 'Bebidas Fitness', image: catBebida.url },
 ];
 
 const Index = () => {
@@ -62,10 +70,12 @@ const Index = () => {
             </div>
           </div>
           <div className="relative">
-            <img
-              src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=900&h=900&fit=crop"
-              alt="Pilha de panquecas fofas com mirtilos frescos e calda"
-              className="w-full aspect-square object-cover rounded-md shadow-card"
+            <SmartImage
+              src={heroPanqueca.url}
+              alt="Pilha de panquecas fitness fofas com mirtilos frescos e calda"
+              eager
+              wrapperClassName="w-full aspect-square rounded-md shadow-card"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
@@ -102,15 +112,15 @@ const Index = () => {
               Explore as nossas categorias e encontre a inspiração ideal para a sua próxima refeição.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
             {categoryFeature.map((cat) => (
               <Link
                 to={`/receitas?categoria=${encodeURIComponent(cat.name)}`}
                 key={cat.name}
-                className="group relative aspect-square rounded-md overflow-hidden"
+                className="group relative aspect-square rounded-md overflow-hidden bg-tasty-peach/40"
                 aria-label={`Ver receitas da categoria ${cat.name}`}
               >
-                <img src={cat.image} alt={`Categoria ${cat.name}`} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <img src={cat.image} alt={`Categoria ${cat.name}`} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                 <span className="absolute bottom-4 left-4 text-white font-extrabold text-lg">{cat.name}</span>
               </Link>

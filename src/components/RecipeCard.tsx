@@ -1,22 +1,23 @@
 import { Link } from 'react-router-dom';
 import type { Recipe } from '@/data/recipes';
+import { SmartImage } from '@/components/SmartImage';
 
 interface RecipeCardProps {
   recipe: Recipe;
+  eager?: boolean;
 }
 
-export const RecipeCard = ({ recipe }: RecipeCardProps) => {
+export const RecipeCard = ({ recipe, eager = false }: RecipeCardProps) => {
   return (
     <article className="group">
       <Link to={`/receita/${recipe.slug}`} className="block overflow-hidden rounded-sm mb-5">
-        <div className="aspect-[4/3] overflow-hidden bg-muted">
-          <img
-            src={recipe.image}
-            alt={recipe.title}
-            loading="lazy"
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-        </div>
+        <SmartImage
+          src={recipe.image}
+          alt={recipe.title}
+          eager={eager}
+          wrapperClassName="aspect-[4/3] w-full"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
       </Link>
       <Link
         to={`/receitas?categoria=${encodeURIComponent(recipe.category)}`}
@@ -28,7 +29,7 @@ export const RecipeCard = ({ recipe }: RecipeCardProps) => {
         <Link to={`/receita/${recipe.slug}`}>{recipe.title}</Link>
       </h3>
       <div className="flex items-center gap-3 text-xs text-tasty-gray">
-        <img src={recipe.authorAvatar} alt={recipe.author} className="w-7 h-7 rounded-full object-cover" />
+        <img src={recipe.authorAvatar} alt={recipe.author} loading="lazy" className="w-7 h-7 rounded-full object-cover" />
         <span className="font-semibold uppercase tracking-wider text-tasty-dark">{recipe.author}</span>
         <span className="text-tasty-gray/50">/</span>
         <span className="uppercase tracking-wider">{recipe.date}</span>

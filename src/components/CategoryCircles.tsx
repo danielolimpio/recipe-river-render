@@ -1,26 +1,16 @@
 import { Link } from 'react-router-dom';
+import catCafe from '@/assets/recipes/como-fazer-waffles-fit-com-whey-protein.webp.asset.json';
+import catAlmoco from '@/assets/recipes/frango-xadrez-fitness-um-classico-oriental-com-um-toque-saudavel.webp.asset.json';
+import catLanche from '@/assets/recipes/pao-de-queijo-de-tapioca-leveza-e-sabor-em-cada-mordida.webp.asset.json';
+import catSobremesa from '@/assets/recipes/receita-completa-de-bolo-de-chocolate-fitness.webp.asset.json';
+import catBebida from '@/assets/recipes/shake-de-acai-com-banana-e-granola.webp.asset.json';
 
 const items = [
-  {
-    name: 'Café da Manhã',
-    image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=300&h=300&fit=crop',
-  },
-  {
-    name: 'Almoço e Jantar',
-    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=300&h=300&fit=crop',
-  },
-  {
-    name: 'Lanche da Tarde',
-    image: 'https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=300&h=300&fit=crop',
-  },
-  {
-    name: 'Sobremesas Fit',
-    image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?w=300&h=300&fit=crop',
-  },
-  {
-    name: 'Bebidas Fitness',
-    image: 'https://images.unsplash.com/photo-1505252585461-04db1eb84625?w=300&h=300&fit=crop',
-  },
+  { name: 'Café da Manhã', image: catCafe.url },
+  { name: 'Almoço e Jantar', image: catAlmoco.url },
+  { name: 'Lanche da Tarde', image: catLanche.url },
+  { name: 'Sobremesas Fit', image: catSobremesa.url },
+  { name: 'Bebidas Fitness', image: catBebida.url },
 ];
 
 export const CategoryCircles = () => {
@@ -42,8 +32,9 @@ export const CategoryCircles = () => {
                     <img
                       src={cat.image}
                       alt={cat.name}
-                      loading="lazy"
-                      className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover"
+                      loading="eager"
+                      decoding="async"
+                      className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover bg-tasty-peach/40"
                     />
                   </span>
                 </span>
