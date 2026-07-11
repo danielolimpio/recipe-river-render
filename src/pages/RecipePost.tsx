@@ -8,6 +8,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Badge } from '@/components/ui/badge';
 import { Printer, Clock, Users, Flame, ChefHat, Leaf, Sparkles, TrendingUp, BookOpen, Apple, Award, Heart, Zap } from 'lucide-react';
 import { recipes } from '@/data/recipes';
+import { SmartImage } from '@/components/SmartImage';
 
 const RecipePost = () => {
   const { slug } = useParams();
@@ -65,8 +66,14 @@ const RecipePost = () => {
 
           {/* Hero image with print badge */}
           <div className="relative rounded-md overflow-hidden mb-10">
-            <img src={recipe.image} alt={recipe.title} className="w-full aspect-[4/3] object-cover" />
-            <button className="absolute bottom-4 right-4 bg-tasty-dark text-white text-xs font-semibold rounded-md px-3 py-2 flex items-center gap-2 hover:bg-tasty-darker">
+            <SmartImage
+              src={recipe.image}
+              alt={recipe.title}
+              eager
+              wrapperClassName="w-full aspect-[4/3]"
+              className="w-full h-full object-cover"
+            />
+            <button className="absolute bottom-4 right-4 bg-tasty-dark text-white text-xs font-semibold rounded-md px-3 py-2 flex items-center gap-2 hover:bg-tasty-darker z-10">
               <Printer className="h-4 w-4" /> Imprimir
             </button>
           </div>

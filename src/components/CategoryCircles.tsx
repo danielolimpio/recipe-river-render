@@ -42,8 +42,9 @@ export const CategoryCircles = () => {
                     <img
                       src={cat.image}
                       alt={cat.name}
-                      loading="lazy"
-                      className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover"
+                      loading="eager"
+                      decoding="async"
+                      className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover bg-tasty-peach/40"
                     />
                   </span>
                 </span>
