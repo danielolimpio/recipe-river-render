@@ -60,9 +60,40 @@ const RecipePost = () => {
       {/* Article */}
       <section className="py-16">
         <div className="container-tasty max-w-3xl">
-          <p className="text-tasty-orange text-base leading-relaxed mb-10">
-            {recipe.excerpt} Uma combinação irresistível para qualquer ocasião, do brunch ao jantar especial.
-          </p>
+          {/* Premium destaque intro block */}
+          <div className="relative mb-10 rounded-2xl overflow-hidden border-2 border-primary/20 bg-gradient-to-br from-tasty-peach/60 via-card to-card shadow-lg">
+            <div className="absolute inset-y-0 left-0 w-1.5 bg-gradient-premium" />
+            <div className="absolute -top-8 -right-8 w-40 h-40 rounded-full bg-gradient-premium opacity-10 blur-2xl" />
+            <div className="relative p-6 md:p-8">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-gradient-premium text-white shadow-md">
+                  <Sparkles className="h-5 w-5" />
+                </span>
+                <div>
+                  <Badge className="bg-tasty-dark text-white hover:bg-tasty-dark border-0 uppercase tracking-[0.18em] text-[10px] font-bold px-3 py-1">
+                    Destaque Fitness
+                  </Badge>
+                  <div className="text-[11px] text-tasty-gray mt-1 font-semibold uppercase tracking-wider">
+                    Descrição Estratégica da Receita
+                  </div>
+                </div>
+              </div>
+              <p className="text-tasty-dark text-base md:text-[17px] leading-relaxed font-medium first-letter:text-4xl first-letter:font-extrabold first-letter:text-primary first-letter:mr-1 first-letter:float-left first-letter:leading-none first-letter:mt-1">
+                {recipe.excerpt}
+              </p>
+              <div className="mt-5 flex flex-wrap items-center gap-2">
+                <Badge variant="outline" className="border-primary/30 text-tasty-dark bg-white/60 gap-1">
+                  <Leaf className="h-3 w-3 text-primary" /> Nutritivo
+                </Badge>
+                <Badge variant="outline" className="border-primary/30 text-tasty-dark bg-white/60 gap-1">
+                  <Heart className="h-3 w-3 text-primary" /> Balanceado
+                </Badge>
+                <Badge variant="outline" className="border-primary/30 text-tasty-dark bg-white/60 gap-1">
+                  <Award className="h-3 w-3 text-primary" /> Receita Premium
+                </Badge>
+              </div>
+            </div>
+          </div>
 
           {/* Hero image with print badge */}
           <div className="relative rounded-md overflow-hidden mb-10">
