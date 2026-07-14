@@ -388,7 +388,7 @@ export const recipes: Recipe[] = [
     id: 13,
     slug: "shake-proteico-de-cafe-com-leite-de-amendoas",
     title: "Shake Proteico de Café com Leite de Amêndoas",
-    excerpt: "A cafeína inteligente do espresso encontra o whey protein e o leite de amêndoas em uma bebida cremosa, low-carb e altamente proteica. Perfeita para começar o dia acordado, saciado e com foco muscular."boost\" na energia no meio da tarde com um Shake Proteico de Café com Leite de Amêndoas. Esta bebida combina a energia natural da",
+    excerpt: "A cafeína inteligente do espresso encontra o whey protein e o leite de amêndoas em uma bebida cremosa, low-carb e altamente proteica. Perfeita para começar o dia acordado, saciado e com foco muscular.",
     image: img_shake_proteico_de_cafe_com_leite_de_amendoas.url,
     category: "Bebidas Fitness",
     author: 'Culinária Fitness',
