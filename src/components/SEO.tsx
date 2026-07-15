@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 
 const SITE_URL = 'https://culinariafitness.com';
-const DEFAULT_OG_IMAGE = `${SITE_URL}/og-culinaria-fitness.jpg`;
+const DEFAULT_OG_IMAGE = `${SITE_URL}/images/site/og-culinaria-fitness.webp`;
 
 interface SEOProps {
   title: string;
