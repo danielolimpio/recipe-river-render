@@ -3,7 +3,8 @@ import { Link, NavLink } from 'react-router-dom';
 import { Search, User, Facebook, Twitter, Instagram, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import logo from '@/assets/logo-culinaria-fitness.png';
+
+const logo = '/images/site/logo-culinaria-fitness.webp';
 
 const navItems = [
   { label: 'Início', to: '/' },

@@ -26,42 +26,44 @@ export interface Recipe {
   history?: string[];
 }
 
-import img_agua_saborizada_com_limao_hortela_e_pepino from '@/assets/recipes/agua-saborizada-com-limao-hortela-e-pepino.webp.asset.json';
-import img_bolinho_de_chuva_fitness_tradicao_em_uma_versao_saudavel_e_saborosa from '@/assets/recipes/bolinho-de-chuva-fitness-tradicao-em-uma-versao-saudavel-e-saborosa.webp.asset.json';
-import img_bolo_de_caneca_fitness_rapido_saudavel_e_perfeito_para_qualquer_hora from '@/assets/recipes/bolo-de-caneca-fitness-rapido-saudavel-e-perfeito-para-qualquer-hora.webp.asset.json';
-import img_bolo_de_cenoura_fitness_com_cobertura_de_chocolate_amargo from '@/assets/recipes/bolo-de-cenoura-fitness-com-cobertura-de-chocolate-amargo.webp.asset.json';
-import img_como_fazer_waffles_fit_com_whey_protein from '@/assets/recipes/como-fazer-waffles-fit-com-whey-protein.webp.asset.json';
-import img_crepioca_pratica_para_energia_sustentada from '@/assets/recipes/crepioca-pratica-para-energia-sustentada.webp.asset.json';
-import img_omeletes_com_vegetais_simples_e_saudaveis from '@/assets/recipes/omeletes-com-vegetais-simples-e-saudaveis.webp.asset.json';
-import img_panqueca_fitness_leve_versatil_e_deliciosa from '@/assets/recipes/panqueca-fitness-leve-versatil-e-deliciosa.webp.asset.json';
-import img_pao_de_queijo_de_tapioca_leveza_e_sabor_em_cada_mordida from '@/assets/recipes/pao-de-queijo-de-tapioca-leveza-e-sabor-em-cada-mordida.webp.asset.json';
-import img_pizza_de_liquidificador_fitness_sabor_praticidade_e_saude_em_cada_fatia from '@/assets/recipes/pizza-de-liquidificador-fitness-sabor-praticidade-e-saude-em-cada-fatia.webp.asset.json';
-import img_pos_treino_energizante_nutricao_e_sabor_para_seus_resultados from '@/assets/recipes/pos-treino-energizante-nutricao-e-sabor-para-seus-resultados.webp.asset.json';
-import img_shake_de_acai_com_banana_e_granola from '@/assets/recipes/shake-de-acai-com-banana-e-granola.webp.asset.json';
-import img_shake_proteico_de_cafe_com_leite_de_amendoas from '@/assets/recipes/shake-proteico-de-cafe-com-leite-de-amendoas.webp.asset.json';
-import img_smoothie_proteico_de_banana_e_pasta_de_amendoim_cremoso_energetico_e_delicioso from '@/assets/recipes/smoothie-proteico-de-banana-e-pasta-de-amendoim-cremoso-energetico-e-delicioso.webp.asset.json';
-import img_smoothie_tropical_de_abacaxi_e_coco from '@/assets/recipes/smoothie-tropical-de-abacaxi-e-coco.webp.asset.json';
-import img_suco_detox_de_couve_limao_e_gengibre from '@/assets/recipes/suco-detox-de-couve-limao-e-gengibre.webp.asset.json';
-import img_suco_detox_verde_fitness_frescor_energia_e_saude_em_um_gole from '@/assets/recipes/suco-detox-verde-fitness-frescor-energia-e-saude-em-um-gole.webp.asset.json';
-import img_suco_verde_com_espinafre_gengibre_e_maca from '@/assets/recipes/suco-verde-com-espinafre-gengibre-e-maca.webp.asset.json';
-import img_tapiocas_recheadas_com_combinacoes_fitness from '@/assets/recipes/tapiocas-recheadas-com-combinacoes-fitness.webp.asset.json';
-import img_torta_de_liquidificador_fitness_rapida_saudavel_e_deliciosa from '@/assets/recipes/torta-de-liquidificador-fitness-rapida-saudavel-e-deliciosa.webp.asset.json';
-import img_5_receitas_de_marmitas_fitness_para_emagrecer from '@/assets/recipes/5-receitas-de-marmitas-fitness-para-emagrecer.webp.asset.json';
-import img_arroz_de_marisco_fitness_leve_nutritivo_e_repleto_de_sabor from '@/assets/recipes/arroz-de-marisco-fitness-leve-nutritivo-e-repleto-de-sabor.webp.asset.json';
-import img_arroz_doce_fitness_doce_cremoso_e_leve from '@/assets/recipes/arroz-doce-fitness-doce-cremoso-e-leve.webp.asset.json';
-import img_bacalhau_com_natas_fitness_leve_cremoso_e_repleto_de_sabor from '@/assets/recipes/bacalhau-com-natas-fitness-leve-cremoso-e-repleto-de-sabor.webp.asset.json';
-import img_deliciosa_receita_completa_de_pudim_fitness from '@/assets/recipes/deliciosa-receita-completa-de-pudim-fitness.webp.asset.json';
-import img_feijao_tropeiro_fitness_o_sabor_tradicional_em_uma_versao_saudavel_e_leve from '@/assets/recipes/feijao-tropeiro-fitness-o-sabor-tradicional-em-uma-versao-saudavel-e-leve.webp.asset.json';
-import img_frango_xadrez_fitness_um_classico_oriental_com_um_toque_saudavel from '@/assets/recipes/frango-xadrez-fitness-um-classico-oriental-com-um-toque-saudavel.webp.asset.json';
-import img_lasanha_de_frango_fitness_uma_delicia_cremosa_e_saudavel from '@/assets/recipes/lasanha-de-frango-fitness-uma-delicia-cremosa-e-saudavel.webp.asset.json';
-import img_macarrao_alho_e_oleo_fitness_simples_saboroso_e_saudavel from '@/assets/recipes/macarrao-alho-e-oleo-fitness-simples-saboroso-e-saudavel.webp.asset.json';
-import img_pudim_de_leite_condensado_fitness_leve_cremoso_e_irresistivel from '@/assets/recipes/pudim-de-leite-condensado-fitness-leve-cremoso-e-irresistivel.webp.asset.json';
-import img_receita_completa_de_bolo_de_chocolate_fitness from '@/assets/recipes/receita-completa-de-bolo-de-chocolate-fitness.webp.asset.json';
-import img_receita_inovadora_completa_de_fricasse_de_frango_fitness from '@/assets/recipes/receita-inovadora-completa-de-fricasse-de-frango-fitness.webp.asset.json';
-import img_receita_saborosa_completa_de_risoto_de_camarao_fitness from '@/assets/recipes/receita-saborosa-completa-de-risoto-de-camarao-fitness.webp.asset.json';
-import img_salpicao_de_frango_fitness_leve_nutritivo_e_delicioso from '@/assets/recipes/salpicao-de-frango-fitness-leve-nutritivo-e-delicioso.webp.asset.json';
+const recipeImage = (filename: string) => `/images/recipes/${filename}`;
 
-const avatar = 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop';
+const img_agua_saborizada_com_limao_hortela_e_pepino = { url: recipeImage('agua-saborizada-com-limao-hortela-e-pepino.webp') };
+const img_bolinho_de_chuva_fitness_tradicao_em_uma_versao_saudavel_e_saborosa = { url: recipeImage('bolinho-de-chuva-fitness-tradicao-em-uma-versao-saudavel-e-saborosa.webp') };
+const img_bolo_de_caneca_fitness_rapido_saudavel_e_perfeito_para_qualquer_hora = { url: recipeImage('bolo-de-caneca-fitness-rapido-saudavel-e-perfeito-para-qualquer-hora.webp') };
+const img_bolo_de_cenoura_fitness_com_cobertura_de_chocolate_amargo = { url: recipeImage('bolo-de-cenoura-fitness-com-cobertura-de-chocolate-amargo.webp') };
+const img_como_fazer_waffles_fit_com_whey_protein = { url: recipeImage('como-fazer-waffles-fit-com-whey-protein.webp') };
+const img_crepioca_pratica_para_energia_sustentada = { url: recipeImage('crepioca-pratica-para-energia-sustentada.webp') };
+const img_omeletes_com_vegetais_simples_e_saudaveis = { url: recipeImage('omeletes-com-vegetais-simples-e-saudaveis.webp') };
+const img_panqueca_fitness_leve_versatil_e_deliciosa = { url: recipeImage('panqueca-fitness-leve-versatil-e-deliciosa.webp') };
+const img_pao_de_queijo_de_tapioca_leveza_e_sabor_em_cada_mordida = { url: recipeImage('pao-de-queijo-de-tapioca-leveza-e-sabor-em-cada-mordida.webp') };
+const img_pizza_de_liquidificador_fitness_sabor_praticidade_e_saude_em_cada_fatia = { url: recipeImage('pizza-de-liquidificador-fitness-sabor-praticidade-e-saude-em-cada-fatia.webp') };
+const img_pos_treino_energizante_nutricao_e_sabor_para_seus_resultados = { url: recipeImage('pos-treino-energizante-nutricao-e-sabor-para-seus-resultados.webp') };
+const img_shake_de_acai_com_banana_e_granola = { url: recipeImage('shake-de-acai-com-banana-e-granola.webp') };
+const img_shake_proteico_de_cafe_com_leite_de_amendoas = { url: recipeImage('shake-proteico-de-cafe-com-leite-de-amendoas.webp') };
+const img_smoothie_proteico_de_banana_e_pasta_de_amendoim_cremoso_energetico_e_delicioso = { url: recipeImage('smoothie-proteico-de-banana-e-pasta-de-amendoim-cremoso-energetico-e-delicioso.webp') };
+const img_smoothie_tropical_de_abacaxi_e_coco = { url: recipeImage('smoothie-tropical-de-abacaxi-e-coco.webp') };
+const img_suco_detox_de_couve_limao_e_gengibre = { url: recipeImage('suco-detox-de-couve-limao-e-gengibre.webp') };
+const img_suco_detox_verde_fitness_frescor_energia_e_saude_em_um_gole = { url: recipeImage('suco-detox-verde-fitness-frescor-energia-e-saude-em-um-gole.webp') };
+const img_suco_verde_com_espinafre_gengibre_e_maca = { url: recipeImage('suco-verde-com-espinafre-gengibre-e-maca.webp') };
+const img_tapiocas_recheadas_com_combinacoes_fitness = { url: recipeImage('tapiocas-recheadas-com-combinacoes-fitness.webp') };
+const img_torta_de_liquidificador_fitness_rapida_saudavel_e_deliciosa = { url: recipeImage('torta-de-liquidificador-fitness-rapida-saudavel-e-deliciosa.webp') };
+const img_5_receitas_de_marmitas_fitness_para_emagrecer = { url: recipeImage('5-receitas-de-marmitas-fitness-para-emagrecer.webp') };
+const img_arroz_de_marisco_fitness_leve_nutritivo_e_repleto_de_sabor = { url: recipeImage('arroz-de-marisco-fitness-leve-nutritivo-e-repleto-de-sabor.webp') };
+const img_arroz_doce_fitness_doce_cremoso_e_leve = { url: recipeImage('arroz-doce-fitness-doce-cremoso-e-leve.webp') };
+const img_bacalhau_com_natas_fitness_leve_cremoso_e_repleto_de_sabor = { url: recipeImage('bacalhau-com-natas-fitness-leve-cremoso-e-repleto-de-sabor.webp') };
+const img_deliciosa_receita_completa_de_pudim_fitness = { url: recipeImage('deliciosa-receita-completa-de-pudim-fitness.webp') };
+const img_feijao_tropeiro_fitness_o_sabor_tradicional_em_uma_versao_saudavel_e_leve = { url: recipeImage('feijao-tropeiro-fitness-o-sabor-tradicional-em-uma-versao-saudavel-e-leve.webp') };
+const img_frango_xadrez_fitness_um_classico_oriental_com_um_toque_saudavel = { url: recipeImage('frango-xadrez-fitness-um-classico-oriental-com-um-toque-saudavel.webp') };
+const img_lasanha_de_frango_fitness_uma_delicia_cremosa_e_saudavel = { url: recipeImage('lasanha-de-frango-fitness-uma-delicia-cremosa-e-saudavel.webp') };
+const img_macarrao_alho_e_oleo_fitness_simples_saboroso_e_saudavel = { url: recipeImage('macarrao-alho-e-oleo-fitness-simples-saboroso-e-saudavel.webp') };
+const img_pudim_de_leite_condensado_fitness_leve_cremoso_e_irresistivel = { url: recipeImage('pudim-de-leite-condensado-fitness-leve-cremoso-e-irresistivel.webp') };
+const img_receita_completa_de_bolo_de_chocolate_fitness = { url: recipeImage('receita-completa-de-bolo-de-chocolate-fitness.webp') };
+const img_receita_inovadora_completa_de_fricasse_de_frango_fitness = { url: recipeImage('receita-inovadora-completa-de-fricasse-de-frango-fitness.webp') };
+const img_receita_saborosa_completa_de_risoto_de_camarao_fitness = { url: recipeImage('receita-saborosa-completa-de-risoto-de-camarao-fitness.webp') };
+const img_salpicao_de_frango_fitness_leve_nutritivo_e_delicioso = { url: recipeImage('salpicao-de-frango-fitness-leve-nutritivo-e-delicioso.webp') };
+
+const avatar = '/images/people/autor-fitness.webp';
 
 export const categories = [
   { name: "Bebidas Fitness", slug: "bebidas-fitness" },
@@ -962,7 +964,7 @@ export const recipes: Recipe[] = [
 export const trendingRecipes = recipes.slice(0, 4).map((r) => ({ title: r.title, image: r.image, slug: r.slug }));
 
 export const chefs = [
-  { name: 'Nick Paterson', role: 'Chef Executivo', avatar: 'https://images.unsplash.com/photo-1583394293214-28ded15ee548?w=300&h=300&fit=crop' },
-  { name: 'Jacob Guerrero', role: 'Chef', avatar: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=300&h=300&fit=crop' },
-  { name: 'Melisa Frey', role: 'Chef Pâtissière', avatar: 'https://images.unsplash.com/photo-1607631568010-a87245c0daf8?w=300&h=300&fit=crop' },
+  { name: 'Nick Paterson', role: 'Chef Executivo', avatar: '/images/people/chef-nick.webp' },
+  { name: 'Jacob Guerrero', role: 'Chef', avatar: '/images/people/chef-jacob.webp' },
+  { name: 'Melisa Frey', role: 'Chef Pâtissière', avatar: '/images/people/chef-melisa.webp' },
 ];

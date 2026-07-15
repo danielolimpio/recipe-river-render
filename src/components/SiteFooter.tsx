@@ -42,7 +42,7 @@ export const SiteFooter = () => {
       {/* Main columns */}
       <div className="container-tasty py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
-          <img src="/logo-culinaria-fitness.png" alt="Culinária Fitness" className="h-12 w-auto mb-5 brightness-0 invert" />
+          <img src="/images/site/logo-culinaria-fitness.webp" alt="Culinária Fitness" className="h-12 w-auto mb-5 brightness-0 invert" />
           <h4 className="font-extrabold text-base mb-5">Conheça a Culinária Fitness</h4>
           <ul className="space-y-3 text-sm text-white/70">
             <li><Link to="/" className="hover:text-tasty-orange">Início</Link></li>
