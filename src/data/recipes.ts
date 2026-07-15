@@ -830,7 +830,7 @@ export const recipes: Recipe[] = [
     id: 30,
     slug: "pudim-de-leite-condensado-fitness-leve-cremoso-e-irresistivel",
     title: "Pudim de Leite Condensado Fitness Leve Cremoso e Irresistível",
-    excerpt: "A cremosidade clássica do pudim brasileiro reproduzida com leite condensado fit (feito com leite em pó desnatado e adoçante). O resultado é a mesma calda dourada, a mesma textura sedosa — em uma versão leve, sem culpa e absolutamente irresistível."leite conden",
+    excerpt: "A cremosidade clássica do pudim brasileiro reproduzida com leite condensado fit (feito com leite em pó desnatado e adoçante). O resultado é a mesma calda dourada, a mesma textura sedosa — em uma versão leve, sem culpa e absolutamente irresistível.",
     image: img_pudim_de_leite_condensado_fitness_leve_cremoso_e_irresistivel.url,
     category: "Sobremesas Fit",
     author: 'Culinária Fitness',
