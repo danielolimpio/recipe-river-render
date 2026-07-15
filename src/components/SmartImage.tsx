@@ -37,25 +37,33 @@ export const SmartImage = ({
           className="absolute inset-0 animate-pulse bg-gradient-to-br from-tasty-peach/60 via-muted to-tasty-peach/40"
         />
       )}
-      <img
-        {...rest}
-        src={src}
-        alt={alt}
-        loading={eager ? 'eager' : 'lazy'}
-        decoding={eager ? 'sync' : 'async'}
-        // @ts-expect-error fetchpriority is valid HTML attr
-        fetchpriority={eager ? 'high' : 'auto'}
-        onLoad={() => setLoaded(true)}
-        onError={() => {
-          setFailed(true);
-          setLoaded(true);
-        }}
-        className={cn(
-          'transition-opacity duration-500',
-          loaded ? 'opacity-100' : 'opacity-0',
-          className,
-        )}
-      />
+      {failed ? (
+        <span
+          role="img"
+          aria-label={alt}
+          className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-tasty-peach/70 via-muted to-tasty-peach/40"
+        />
+      ) : (
+        <img
+          {...rest}
+          src={src}
+          alt={alt}
+          loading={eager ? 'eager' : 'lazy'}
+          decoding={eager ? 'sync' : 'async'}
+          // @ts-expect-error fetchpriority is valid HTML attr
+          fetchpriority={eager ? 'high' : 'auto'}
+          onLoad={() => setLoaded(true)}
+          onError={() => {
+            setFailed(true);
+            setLoaded(true);
+          }}
+          className={cn(
+            'transition-opacity duration-500',
+            loaded ? 'opacity-100' : 'opacity-0',
+            className,
+          )}
+        />
+      )}
     </span>
   );
 };

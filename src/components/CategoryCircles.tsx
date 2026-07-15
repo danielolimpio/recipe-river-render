@@ -1,16 +1,11 @@
 import { Link } from 'react-router-dom';
-import catCafe from '@/assets/recipes/como-fazer-waffles-fit-com-whey-protein.webp.asset.json';
-import catAlmoco from '@/assets/recipes/frango-xadrez-fitness-um-classico-oriental-com-um-toque-saudavel.webp.asset.json';
-import catLanche from '@/assets/recipes/pao-de-queijo-de-tapioca-leveza-e-sabor-em-cada-mordida.webp.asset.json';
-import catSobremesa from '@/assets/recipes/receita-completa-de-bolo-de-chocolate-fitness.webp.asset.json';
-import catBebida from '@/assets/recipes/shake-de-acai-com-banana-e-granola.webp.asset.json';
 
 const items = [
-  { name: 'Café da Manhã', image: catCafe.url },
-  { name: 'Almoço e Jantar', image: catAlmoco.url },
-  { name: 'Lanche da Tarde', image: catLanche.url },
-  { name: 'Sobremesas Fit', image: catSobremesa.url },
-  { name: 'Bebidas Fitness', image: catBebida.url },
+  { name: 'Café da Manhã', image: '/images/recipes/como-fazer-waffles-fit-com-whey-protein.webp' },
+  { name: 'Almoço e Jantar', image: '/images/recipes/frango-xadrez-fitness-um-classico-oriental-com-um-toque-saudavel.webp' },
+  { name: 'Lanche da Tarde', image: '/images/recipes/pao-de-queijo-de-tapioca-leveza-e-sabor-em-cada-mordida.webp' },
+  { name: 'Sobremesas Fit', image: '/images/recipes/receita-completa-de-bolo-de-chocolate-fitness.webp' },
+  { name: 'Bebidas Fitness', image: '/images/recipes/shake-de-acai-com-banana-e-granola.webp' },
 ];
 
 export const CategoryCircles = () => {
