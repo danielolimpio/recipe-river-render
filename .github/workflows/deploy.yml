@@ -26,6 +26,9 @@ jobs:
       - name: Mostrar arquivos gerados
         run: ls -la dist/
 
+      - name: Configurar fallback SPA para refresh de rotas
+        run: cp dist/index.html dist/404.html
+
       - name: Deploy FTP para Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:

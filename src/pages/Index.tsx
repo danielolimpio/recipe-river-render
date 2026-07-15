@@ -7,22 +7,16 @@ import { SEO } from '@/components/SEO';
 import { RecipeCard } from '@/components/RecipeCard';
 import { SmartImage } from '@/components/SmartImage';
 import { recipes, chefs } from '@/data/recipes';
-import heroPanqueca from '@/assets/recipes/panqueca-fitness-leve-versatil-e-deliciosa.webp.asset.json';
-import catCafe from '@/assets/recipes/como-fazer-waffles-fit-com-whey-protein.webp.asset.json';
-import catAlmoco from '@/assets/recipes/frango-xadrez-fitness-um-classico-oriental-com-um-toque-saudavel.webp.asset.json';
-import catLanche from '@/assets/recipes/pao-de-queijo-de-tapioca-leveza-e-sabor-em-cada-mordida.webp.asset.json';
-import catSobremesa from '@/assets/recipes/receita-completa-de-bolo-de-chocolate-fitness.webp.asset.json';
-import catBebida from '@/assets/recipes/shake-de-acai-com-banana-e-granola.webp.asset.json';
 
 const heroRecipe = recipes.find((r) => r.slug.startsWith('panqueca')) ?? recipes[0];
 const weekRecipes = recipes.slice(0, 6);
 
 const categoryFeature = [
-  { name: 'Café da Manhã', image: catCafe.url },
-  { name: 'Almoço e Jantar', image: catAlmoco.url },
-  { name: 'Lanche da Tarde', image: catLanche.url },
-  { name: 'Sobremesas Fit', image: catSobremesa.url },
-  { name: 'Bebidas Fitness', image: catBebida.url },
+  { name: 'Café da Manhã', image: '/images/recipes/como-fazer-waffles-fit-com-whey-protein.webp' },
+  { name: 'Almoço e Jantar', image: '/images/recipes/frango-xadrez-fitness-um-classico-oriental-com-um-toque-saudavel.webp' },
+  { name: 'Lanche da Tarde', image: '/images/recipes/pao-de-queijo-de-tapioca-leveza-e-sabor-em-cada-mordida.webp' },
+  { name: 'Sobremesas Fit', image: '/images/recipes/receita-completa-de-bolo-de-chocolate-fitness.webp' },
+  { name: 'Bebidas Fitness', image: '/images/recipes/shake-de-acai-com-banana-e-granola.webp' },
 ];
 
 const Index = () => {
@@ -71,7 +65,7 @@ const Index = () => {
           </div>
           <div className="relative">
             <SmartImage
-              src={heroPanqueca.url}
+              src="/images/recipes/panqueca-fitness-leve-versatil-e-deliciosa.webp"
               alt="Pilha de panquecas fitness fofas com mirtilos frescos e calda"
               eager
               wrapperClassName="w-full aspect-square rounded-md shadow-card"
@@ -134,8 +128,10 @@ const Index = () => {
         <div className="grid md:grid-cols-2 items-stretch">
           <div className="bg-tasty-light">
             <img
-              src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&h=900&fit=crop"
+              src="/images/about/aula-culinaria.webp"
               alt="Pessoa cozinhando usando o app Culinária Fitness no celular"
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover min-h-[320px]"
             />
           </div>
@@ -211,7 +207,7 @@ const Index = () => {
           className="absolute inset-0 opacity-30"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&h=900&fit=crop')",
+              "url('/images/about/aula-culinaria.webp')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}

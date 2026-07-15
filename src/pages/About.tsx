@@ -8,9 +8,9 @@ import { Link } from 'react-router-dom';
 import { chefs } from '@/data/recipes';
 
 const testimonials = [
-  { name: 'Ethan Lucas', text: 'As receitas são incríveis e fáceis de seguir. Mudou minha forma de cozinhar em casa.', avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=120&h=120&fit=crop' },
-  { name: 'Sara Fonseca', text: 'Adoro a variedade de pratos. Cada semana uma nova descoberta na cozinha.', avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&h=120&fit=crop' },
-  { name: 'Kelly Carpenter', text: 'A apresentação e a clareza das receitas são excelentes. Recomendo demais!', avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&h=120&fit=crop' },
+  { name: 'Ethan Lucas', text: 'As receitas são incríveis e fáceis de seguir. Mudou minha forma de cozinhar em casa.', avatar: '/images/people/depoimento-ethan.webp' },
+  { name: 'Sara Fonseca', text: 'Adoro a variedade de pratos. Cada semana uma nova descoberta na cozinha.', avatar: '/images/people/depoimento-sara.webp' },
+  { name: 'Kelly Carpenter', text: 'A apresentação e a clareza das receitas são excelentes. Recomendo demais!', avatar: '/images/people/depoimento-kelly.webp' },
 ];
 
 const About = () => {
@@ -50,8 +50,10 @@ const About = () => {
           </div>
           <div>
             <img
-              src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=900&h=900&fit=crop"
+              src="/images/about/chef-bruno.webp"
               alt="Chef Bruno Tavares preparando prato na cozinha"
+              loading="eager"
+              decoding="async"
               className="w-full rounded-md object-cover aspect-square"
             />
           </div>
@@ -63,8 +65,10 @@ const About = () => {
         <div className="container-tasty grid md:grid-cols-2 gap-12 items-center">
           <div className="relative rounded-md overflow-hidden aspect-[4/3]">
             <img
-              src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&h=700&fit=crop"
+              src="/images/about/aula-culinaria.webp"
               alt="Aula de culinária"
+              loading="lazy"
+              decoding="async"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <button aria-label="Reproduzir vídeo da aula de culinária" className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors">
@@ -131,15 +135,17 @@ const About = () => {
         <div className="container-tasty">
           <div className="relative rounded-lg overflow-hidden aspect-[16/6] min-h-[260px]">
             <img
-              src="https://images.unsplash.com/photo-1551218372-a8789b81b253?w=1600&h=600&fit=crop"
+              src="/images/about/banner-receitas.webp"
               alt="Receitas da Vovó"
+              loading="lazy"
+              decoding="async"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/40" />
             <div className="relative z-10 h-full flex items-center justify-between gap-6 p-8 md:p-12 text-white">
               <div>
                 <div className="flex items-center gap-2 mb-3 text-xs uppercase tracking-wider">
-                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=60" alt="Foto de Dorothy Valdez" className="w-7 h-7 rounded-full" />
+                  <img src="/images/people/autor-fitness.webp" alt="Foto de Dorothy Valdez" loading="lazy" decoding="async" className="w-7 h-7 rounded-full" />
                   Por Dorothy Valdez
                 </div>
                 <h3 className="text-3xl md:text-5xl font-extrabold mb-2">Receitas da Vovó</h3>
