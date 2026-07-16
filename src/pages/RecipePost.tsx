@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Badge } from '@/components/ui/badge';
-import { Printer, Clock, Users, Flame, ChefHat, Leaf, Sparkles, TrendingUp, BookOpen, Apple, Award, Heart, Zap } from 'lucide-react';
+import { Printer, Clock, Users, Flame, ChefHat, Leaf, Sparkles, TrendingUp, BookOpen, Apple, Award, Heart, Zap, HelpCircle } from 'lucide-react';
 import { recipes } from '@/data/recipes';
 import { SmartImage } from '@/components/SmartImage';
 
