@@ -339,6 +339,54 @@ const RecipePost = () => {
             </section>
           )}
 
+          {/* FAQ - Perguntas Frequentes */}
+          {recipe.faq && recipe.faq.length > 0 && (
+            <section className="mb-14">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-premium text-white shadow-md">
+                  <HelpCircle className="h-5 w-5" />
+                </span>
+                <Badge className="bg-tasty-peach/70 text-tasty-dark hover:bg-tasty-peach/70 border-0 uppercase tracking-wider text-[10px] font-bold">Dúvidas Frequentes</Badge>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-extrabold text-tasty-dark mb-1">Perguntas Frequentes Sobre a Receita</h2>
+              <div className="h-1 w-16 bg-gradient-premium rounded-full mb-6" />
+              <div className="space-y-3">
+                {recipe.faq.map((item, i) => (
+                  <details
+                    key={i}
+                    className="group border-2 border-border hover:border-primary/40 rounded-xl bg-card transition-all hover:shadow-md open:shadow-md open:border-primary/40"
+                  >
+                    <summary className="cursor-pointer list-none flex items-start gap-3 p-5 font-extrabold text-tasty-dark text-base">
+                      <span className="inline-flex items-center justify-center shrink-0 w-7 h-7 rounded-full bg-gradient-premium text-white text-xs mt-0.5">
+                        {i + 1}
+                      </span>
+                      <span className="flex-1">{item.question}</span>
+                      <span className="text-primary transition-transform group-open:rotate-45 text-2xl leading-none shrink-0">+</span>
+                    </summary>
+                    <div className="px-5 pb-5 pl-[3.75rem] text-sm text-tasty-gray leading-relaxed">
+                      {item.answer}
+                    </div>
+                  </details>
+                ))}
+              </div>
+              {/* JSON-LD structured data for FAQ SEO */}
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify({
+                    '@context': 'https://schema.org',
+                    '@type': 'FAQPage',
+                    mainEntity: recipe.faq.map((f) => ({
+                      '@type': 'Question',
+                      name: f.question,
+                      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+                    })),
+                  }),
+                }}
+              />
+            </section>
+          )}
+
 
           <p className="text-tasty-orange text-sm leading-relaxed mb-12">
             Sirva acompanhada de uma bebida refrescante e desfrute deste prato em boa companhia.
