@@ -24,6 +24,8 @@ export interface Recipe {
   differentiation?: string[];
   entrepreneurship?: string[];
   history?: string[];
+  subtitle?: string;
+  faq?: { question: string; answer: string }[];
 }
 
 const recipeImage = (filename: string) => `/images/recipes/${filename}`;
@@ -957,6 +959,522 @@ export const recipes: Recipe[] = [
     differentiation: [],
     entrepreneurship: ["**No cardápio do restaurante**", "**Venda em porções individuais**", "**Marketing digital**", "**Crie combos**", "**Preço e lucro**"],
     history: ["O salpicão de frango é um prato tradicional brasileiro, inspirado em saladas mistas europeias. Popular em celebrações, é conhecido por sua textura cremosa e combinação de sabores. A adaptação fitness traz leveza ao prato, mantendo sua essência, mas utilizando ingredientes mais saudáveis e equilibrados."],
+    comments: 0,
+  },
+  {
+    id: 35,
+    slug: "suco-verde-detox-com-abacaxi-e-gengibre-para-emagrecer",
+    title: "Suco Verde Detox com Abacaxi e Gengibre para Emagrecer",
+    excerpt: "Um suco verde detox poderoso, cítrico e revigorante que une a doçura tropical do abacaxi, o vigor do gengibre e a densidade nutricional da couve. Uma receita fitness reconhecida por acelerar o metabolismo, reduzir o inchaço e turbinar a energia logo pela manhã — perfeita para quem busca emagrecer com saúde, aumentar a imunidade e desintoxicar o organismo de forma natural.",
+    subtitle: "Suco verde detox low carb com couve, abacaxi, gengibre e limão — a bebida fitness matinal ideal para quem quer perder peso, desinchar e melhorar a digestão em 7 dias.",
+    image: recipeImage('suco-verde-detox-com-abacaxi-e-gengibre-para-emagrecer.webp'),
+    category: "Bebidas Fitness",
+    author: 'Culinária Fitness',
+    authorAvatar: avatar,
+    date: "16 de julho, 2026",
+    course: "Bebida",
+    cuisine: 'Brasileira',
+    difficulty: "Fácil",
+    servings: 2,
+    prepTime: 8,
+    cookTime: 0,
+    calories: 68,
+    ingredients: [
+      "2 folhas grandes de couve manteiga fresca, sem o talo central (fonte de ferro e clorofila).",
+      "1 fatia grossa de abacaxi maduro, cerca de 150g (rica em bromelina e vitamina C).",
+      "1 pedaço de 2 cm de gengibre fresco descascado (termogênico natural).",
+      "Suco de 1 limão siciliano ou taiti (alcalinizante e detox).",
+      "300 ml de água de coco natural gelada (repõe eletrólitos).",
+      "1 colher de chá de chia hidratada (fibra e ômega-3).",
+      "1 folha de hortelã fresca para finalizar (opcional).",
+      "Gelo a gosto."
+    ],
+    directions: [
+      "Preparo dos ingredientes: lave muito bem a couve, a hortelã e o abacaxi. Descasque o gengibre e o abacaxi, cortando-os em cubos médios.",
+      "Preparo dos ingredientes: hidrate a chia em 3 colheres de sopa de água por 10 minutos antes de bater, para melhorar a textura do suco.",
+      "Batendo o suco: no liquidificador de alta potência, adicione a água de coco, o abacaxi, o gengibre, a couve e o suco de limão.",
+      "Batendo o suco: bata em velocidade alta por 40 a 60 segundos, até obter uma mistura homogênea e vibrante, sem pedaços de folha.",
+      "Finalização: acrescente a chia hidratada e pulse rapidamente apenas para incorporar.",
+      "Finalização: coe em uma peneira fina apenas se preferir textura mais leve — para o efeito detox completo, sirva sem coar para preservar as fibras.",
+      "Sirva imediatamente em um copo alto com gelo, decorado com hortelã e uma fatia fina de abacaxi na borda. Consuma em jejum ou até 30 minutos antes do café da manhã para potencializar o efeito termogênico e detox."
+    ],
+    notes: [
+      "Consuma o suco em até 15 minutos após o preparo para preservar as enzimas ativas da bromelina e a vitamina C.",
+      "Para uma versão pré-treino, adicione 1 tâmara sem caroço ou 1 colher de chá de mel — potencializa a energia sem perder o caráter fitness.",
+      "Evite adoçar com açúcar refinado; o abacaxi maduro e a água de coco já entregam doçura natural suficiente.",
+      "Faça o protocolo por 7 dias consecutivos e associe a uma alimentação equilibrada para notar redução do inchaço abdominal."
+    ],
+    nutritionalBenefits: [
+      { ingredient: "Couve manteiga", benefit: "Riquíssima em ferro, cálcio e clorofila; auxilia na desintoxicação hepática e no combate à anemia." },
+      { ingredient: "Abacaxi", benefit: "Fonte de bromelina, enzima que reduz inflamações, melhora a digestão de proteínas e ajuda a desinchar." },
+      { ingredient: "Gengibre", benefit: "Termogênico natural que acelera o metabolismo, favorece a queima de gordura e melhora a imunidade." },
+      { ingredient: "Limão", benefit: "Alcaliniza o organismo, é rico em vitamina C e potencializa o efeito detox do suco verde." },
+      { ingredient: "Água de coco", benefit: "Hidrata profundamente e repõe potássio, magnésio e sódio de forma 100% natural." },
+      { ingredient: "Chia", benefit: "Rica em ômega-3, proteína vegetal e fibras que prolongam a saciedade e regulam o intestino." }
+    ],
+    nutritionalTable: [
+      { nutrient: "Calorias", quantity: "68 kcal" },
+      { nutrient: "Proteínas", quantity: "1,8 g" },
+      { nutrient: "Carboidratos", quantity: "14 g" },
+      { nutrient: "Fibras", quantity: "3 g" },
+      { nutrient: "Gorduras totais", quantity: "0,9 g" },
+      { nutrient: "Vitamina C", quantity: "62 mg" },
+      { nutrient: "Sódio", quantity: "35 mg" }
+    ],
+    differentiation: [
+      "**Por que este suco verde é diferente**",
+      "• Combina 3 ativos comprovados (bromelina, gingerol e clorofila) que agem em sinergia para acelerar a perda de peso.",
+      "• Zero açúcar adicionado, low carb e liberado em dietas cetogênicas moderadas.",
+      "• Fórmula equilibrada: adocica sem exagerar em frutas, evitando picos de glicose.",
+      "**Vantagens exclusivas**",
+      "• Rende dose funcional real: 300 ml prontos para tomar em jejum.",
+      "• Pode ser preparado em batch e mantido por até 24h em vidro âmbar refrigerado."
+    ],
+    entrepreneurship: [
+      "**Público-alvo estratégico**",
+      "• Mulheres de 25 a 55 anos em rotina fitness, gestantes com liberação médica, atletas amadores e clientes de nutricionistas.",
+      "**Como vender**",
+      "• Ofereça em pacotes de 5 ou 7 dias (protocolo detox) em juice bars, academias e clínicas de estética.",
+      "• Rotule com selo 'zero açúcar' e destaque a bromelina do abacaxi como diferencial funcional.",
+      "**Precificação sugerida**",
+      "• Custo médio de produção: R$ 3,50 por 300 ml. Venda sugerida: R$ 12,90 a R$ 16,00 — margem superior a 250%.",
+      "**Marketing digital**",
+      "• Grave vídeos curtos no Reels e TikTok mostrando o antes e depois da coloração ao bater — vídeos verticais de suco verde performam altíssimo.",
+      "• Trabalhe hashtags como #sucoverdedetox #emagrecercomsaude #detoxfitness."
+    ],
+    history: [
+      "O suco verde ganhou notoriedade mundial nos anos 2000 com o movimento 'green juice' popularizado nos Estados Unidos por nutricionistas funcionais e celebridades adeptas do bem-estar.",
+      "No Brasil, a receita ganhou identidade própria com a inclusão do abacaxi e do gengibre — ingredientes tropicais que reforçam o efeito termogênico e adaptam a bebida ao clima quente.",
+      "Hoje é uma das bebidas mais buscadas em plataformas de receitas fitness no país, principalmente entre pessoas em busca de emagrecimento saudável e sustentável."
+    ],
+    faq: [
+      { question: "O suco verde detox realmente emagrece?", answer: "Sim, quando associado a uma dieta equilibrada e prática regular de exercícios. Ele reduz o inchaço, melhora a digestão e aumenta a queima calórica graças ao gengibre e à bromelina do abacaxi." },
+      { question: "Posso tomar o suco verde todos os dias?", answer: "Sim, o consumo diário é seguro para adultos saudáveis. O ideal é tomar em jejum por até 30 dias, fazendo pausas de 7 dias entre os ciclos." },
+      { question: "Qual o melhor horário para tomar suco detox?", answer: "Em jejum, logo ao acordar, ou até 30 minutos antes do café da manhã, para maximizar a absorção dos nutrientes e o efeito termogênico." },
+      { question: "Preciso coar o suco verde?", answer: "Não. Coar retira as fibras, que são essenciais para a saciedade e para a saúde intestinal. Beba com fibras para potencializar o efeito emagrecedor." },
+      { question: "Gestantes podem tomar esse suco?", answer: "Gestantes devem consultar o obstetra antes. O gengibre e o limão são geralmente seguros em pequenas quantidades, mas cada caso exige avaliação médica individual." },
+      { question: "Posso substituir a couve por outro vegetal?", answer: "Sim, espinafre, rúcula ou couve kale funcionam como substitutos, mantendo o alto teor de clorofila e ferro." },
+      { question: "Quanto tempo dura o suco na geladeira?", answer: "Até 24 horas em recipiente de vidro escuro fechado e refrigerado. Após esse período, perde vitaminas e enzimas ativas." },
+      { question: "Suco verde é low carb e cetogênico?", answer: "Esta versão é low carb (14 g de carboidratos por porção). Em dietas cetogênicas rigorosas, reduza o abacaxi pela metade ou substitua por meio pepino." },
+      { question: "Crianças podem tomar suco verde detox?", answer: "Sim, mas em porções menores (100 ml) e sem gengibre, que pode ser forte para paladares infantis." }
+    ],
+    comments: 0,
+  },
+  {
+    id: 36,
+    slug: "cookies-fitness-de-aveia-e-banana-sem-acucar",
+    title: "Cookies Fitness de Aveia e Banana Sem Açúcar e Sem Farinha",
+    excerpt: "Cookies fitness incrivelmente macios por dentro, dourados por fora, feitos apenas com 5 ingredientes naturais — sem açúcar, sem farinha refinada e sem manteiga. A receita perfeita para o lanche da tarde saudável, ideal para quem cuida do peso, pratica atividade física e busca alternativas gostosas para matar a vontade de doce sem culpa.",
+    subtitle: "Receita fácil de cookies proteicos de banana e aveia, sem glúten, sem lactose e sem açúcar refinado — prontos em 20 minutos e perfeitos para meal prep semanal.",
+    image: recipeImage('cookies-fitness-de-aveia-e-banana-sem-acucar.webp'),
+    category: "Lanche da Tarde",
+    author: 'Culinária Fitness',
+    authorAvatar: avatar,
+    date: "16 de julho, 2026",
+    course: "Lanche",
+    cuisine: 'Brasileira',
+    difficulty: "Fácil",
+    servings: 12,
+    prepTime: 10,
+    cookTime: 15,
+    calories: 78,
+    ingredients: [
+      "2 bananas nanicas bem maduras, amassadas (adoçante natural, cerca de 200g).",
+      "1 e 1/2 xícara de aveia em flocos finos (fonte de fibra beta-glucana).",
+      "2 colheres de sopa de pasta de amendoim integral, sem açúcar (proteína e gordura boa).",
+      "3 colheres de sopa de gotas de chocolate 70% cacau (antioxidantes).",
+      "1 colher de chá de canela em pó (controla a glicemia).",
+      "1 colher de chá de essência de baunilha (opcional).",
+      "1 pitada de sal rosa do Himalaia.",
+      "1 colher de sopa de leite vegetal (amêndoas, aveia ou coco) — apenas se a massa ficar muito seca."
+    ],
+    directions: [
+      "Pré-preparo: preaqueça o forno a 180°C e forre uma assadeira grande com papel-manteiga ou tapete de silicone.",
+      "Amassando a banana: em uma tigela média, amasse as bananas com um garfo até formar um purê homogêneo. Quanto mais maduras, mais doce ficará o cookie.",
+      "Misturando os ingredientes: acrescente a aveia, a pasta de amendoim, a canela, a baunilha e a pitada de sal. Misture bem com uma espátula até obter uma massa firme, pegajosa e uniforme.",
+      "Misturando os ingredientes: se a massa estiver seca demais, adicione 1 colher de sopa de leite vegetal; se estiver muito mole, acrescente 1 colher extra de aveia.",
+      "Incorporando o chocolate: adicione as gotas de chocolate 70% e envolva delicadamente na massa.",
+      "Modelando: com uma colher de sopa, retire porções da massa e modele bolinhas com as mãos levemente umedecidas. Achate cada uma sobre a assadeira, formando cookies de aproximadamente 5 cm.",
+      "Assando: leve ao forno preaquecido por 12 a 15 minutos, ou até que as bordas fiquem levemente douradas. O centro deve permanecer macio.",
+      "Resfriamento: retire do forno e deixe descansar por 5 minutos na assadeira antes de transferir para uma grade — esse tempo é essencial para firmar a textura sem ressecar.",
+      "Sirva morno com café, chá verde ou uma xícara de leite vegetal gelado."
+    ],
+    notes: [
+      "Armazene em pote hermético em temperatura ambiente por até 4 dias ou refrigerado por até 10 dias.",
+      "Para meal prep, congele os cookies já assados por até 60 dias — descongele em temperatura ambiente por 15 minutos.",
+      "Substitua as gotas de chocolate por nibs de cacau para reduzir ainda mais os carboidratos.",
+      "Para versão proteica, adicione 1 scoop (30g) de whey protein sabor baunilha e 2 colheres extras de leite vegetal."
+    ],
+    nutritionalBenefits: [
+      { ingredient: "Banana madura", benefit: "Rica em potássio e triptofano, adoça naturalmente e melhora o humor." },
+      { ingredient: "Aveia em flocos", benefit: "Fonte de beta-glucana, fibra solúvel que reduz colesterol e prolonga a saciedade." },
+      { ingredient: "Pasta de amendoim", benefit: "Fornece proteína vegetal e gorduras monoinsaturadas que ajudam na recuperação muscular." },
+      { ingredient: "Chocolate 70% cacau", benefit: "Rico em flavonoides antioxidantes que protegem o sistema cardiovascular." },
+      { ingredient: "Canela", benefit: "Ajuda a controlar picos de glicemia e potencializa o metabolismo." }
+    ],
+    nutritionalTable: [
+      { nutrient: "Calorias", quantity: "78 kcal" },
+      { nutrient: "Proteínas", quantity: "2,2 g" },
+      { nutrient: "Carboidratos", quantity: "11 g" },
+      { nutrient: "Fibras", quantity: "1,8 g" },
+      { nutrient: "Gorduras totais", quantity: "3 g" },
+      { nutrient: "Açúcares adicionados", quantity: "0 g" },
+      { nutrient: "Sódio", quantity: "18 mg" }
+    ],
+    differentiation: [
+      "**Por que esta receita é premium**",
+      "• Zero açúcar refinado, zero farinha branca e zero óleo — apenas ingredientes reais.",
+      "• Textura macia por dentro e crocante por fora, sem precisar de manteiga ou ovos.",
+      "• Receita naturalmente sem glúten (use aveia certificada) e sem lactose.",
+      "**Diferencial nutricional**",
+      "• Cada cookie entrega fibras e gorduras boas, mantendo a saciedade por mais tempo.",
+      "• Índice glicêmico moderado — ideal para lanches entre refeições sem picos de insulina."
+    ],
+    entrepreneurship: [
+      "**Nicho ideal**",
+      "• Vender em academias, boxes de crossfit, consultórios de nutrição e delivery de marmita fitness.",
+      "**Kits de venda**",
+      "• Monte kits de 6, 12 ou 24 unidades embalados a vácuo — solução prática para clientes fitness com rotina corrida.",
+      "**Preço sugerido**",
+      "• Custo unitário aproximado: R$ 0,90. Venda sugerida: R$ 4,50 a R$ 6,00 por cookie — margem de até 400%.",
+      "**Divulgação**",
+      "• Faça vídeos rápidos mostrando os 5 ingredientes na bancada — a percepção de 'clean label' vende sozinha.",
+      "• Trabalhe hashtags como #cookiefitness #cookiesemacucar #lanchesaudavel."
+    ],
+    history: [
+      "Os cookies surgiram nos Estados Unidos no início do século XX como acidente feliz da chef Ruth Wakefield ao adicionar pedaços de chocolate a uma massa de biscoito.",
+      "Nos anos 2010, com a popularização das dietas low carb e gluten free, surgiram as versões fitness — inicialmente na Austrália e Reino Unido — usando apenas banana e aveia como base.",
+      "No Brasil, a receita viralizou nas redes sociais como símbolo de um lanche saudável e prático, adotada por atletas, nutricionistas e famílias que buscam reduzir o consumo de açúcar refinado."
+    ],
+    faq: [
+      { question: "Posso fazer os cookies sem banana?", answer: "Sim, substitua por 200g de purê de maçã ou 200g de abóbora cozida amassada. A textura fica levemente mais úmida." },
+      { question: "Cookies fitness engordam?", answer: "Não, quando consumidos em porções controladas (1 a 2 unidades). Cada cookie tem apenas 78 kcal e é rico em fibras que ajudam no controle do peso." },
+      { question: "Como fazer cookies crocantes por fora?", answer: "Achate bem a massa antes de assar e aumente o tempo de forno em 3 a 5 minutos, ficando de olho para não queimar." },
+      { question: "Posso usar aveia em flocos grossos?", answer: "Sim, mas processe metade da quantidade no liquidificador antes de misturar, para dar liga à massa." },
+      { question: "Quanto tempo os cookies duram?", answer: "Até 4 dias em pote hermético em temperatura ambiente, 10 dias na geladeira e 60 dias congelados." },
+      { question: "Posso substituir a pasta de amendoim?", answer: "Sim, pasta de castanha de caju, tahine ou creme de amêndoas funcionam perfeitamente e mantêm o perfil fitness." },
+      { question: "Essa receita é low carb?", answer: "É considerada low carb moderada (11g de carboidratos por unidade). Para versão ultra low carb, retire as gotas de chocolate." },
+      { question: "Cookies são bons para pré-treino?", answer: "Sim, consumir 1 a 2 unidades 40 minutos antes do treino fornece energia rápida da banana e sustentada da aveia." },
+      { question: "Crianças podem comer?", answer: "Sim, é uma excelente opção de lanche escolar sem açúcar refinado, corantes ou conservantes." }
+    ],
+    comments: 0,
+  },
+  {
+    id: 37,
+    slug: "overnight-oats-de-morango-com-chia-sem-acucar",
+    title: "Overnight Oats de Morango com Chia Sem Açúcar",
+    excerpt: "O café da manhã fitness mais viral do mundo em uma versão brasileira irresistível: aveia deixada de molho durante a noite em leite vegetal, camadas cremosas com chia proteica e morangos frescos que explodem sabor a cada colherada. Uma refeição pronta em 5 minutos de preparo, ideal para quem tem rotina corrida, treina cedo ou busca um café da manhã saudável, saciante e rico em fibras.",
+    subtitle: "Receita completa de overnight oats saudável com aveia, leite vegetal, chia e morango fresco — o café da manhã proteico pronto para levar, sem cozinhar e sem açúcar.",
+    image: recipeImage('overnight-oats-de-morango-com-chia-sem-acucar.webp'),
+    category: "Café da Manhã",
+    author: 'Culinária Fitness',
+    authorAvatar: avatar,
+    date: "16 de julho, 2026",
+    course: "Café da Manhã",
+    cuisine: 'Internacional',
+    difficulty: "Fácil",
+    servings: 1,
+    prepTime: 5,
+    cookTime: 0,
+    calories: 285,
+    ingredients: [
+      "1/2 xícara (50g) de aveia em flocos finos ou médios.",
+      "3/4 xícara (180 ml) de leite vegetal — amêndoas, aveia ou coco sem açúcar.",
+      "1 colher de sopa de chia (rica em ômega-3 e proteína vegetal).",
+      "1 colher de sopa de iogurte grego natural desnatado (extra cremosidade).",
+      "1 colher de chá de essência de baunilha.",
+      "1 colher de chá de mel puro, xarope de agave ou adoçante natural (opcional).",
+      "6 morangos frescos maduros, cortados em fatias finas.",
+      "1 colher de sopa de granola sem açúcar para finalizar (opcional).",
+      "1 folha de hortelã para decorar."
+    ],
+    directions: [
+      "Base cremosa: em um pote de vidro com tampa (300 ml), adicione a aveia, a chia, o iogurte grego, a essência de baunilha e o adoçante escolhido.",
+      "Base cremosa: acrescente o leite vegetal aos poucos, mexendo bem com uma colher para hidratar todos os grãos e evitar grumos.",
+      "Camada de morango: reserve metade dos morangos para decorar. Amasse a outra metade com um garfo até formar uma polpa levemente pedaçuda — isso libera pectina e adoça naturalmente.",
+      "Montagem em camadas: espalhe a polpa de morango sobre a base de aveia, criando uma faixa vermelha vibrante no meio do pote.",
+      "Descanso: feche o pote e leve à geladeira por no mínimo 6 horas ou preferencialmente durante a noite (8 a 12 horas).",
+      "Finalização: na hora de servir, decore com as fatias de morango reservadas, uma colher de granola crocante e uma folha de hortelã fresca.",
+      "Consumo: pode ser consumido gelado direto do pote ou levemente amornado no micro-ondas por 40 segundos, sem tampa."
+    ],
+    notes: [
+      "Prepare 3 potes de uma só vez para meal prep — duram até 4 dias na geladeira mantendo textura e sabor.",
+      "Se preferir textura mais líquida, aumente o leite vegetal para 1 xícara (240 ml).",
+      "Para versão proteica pós-treino, adicione 1 scoop (30g) de whey protein sabor morango ou baunilha à base.",
+      "Substitua morangos por frutas vermelhas mistas, manga, pêssego ou banana — cada uma cria uma versão nova.",
+      "Use potes de vidro para preservar sabor e evitar transferência de plásticos aos alimentos."
+    ],
+    nutritionalBenefits: [
+      { ingredient: "Aveia em flocos", benefit: "Fonte de beta-glucana, fibra que controla colesterol e mantém saciedade por 4 a 5 horas." },
+      { ingredient: "Chia", benefit: "Riquíssima em ômega-3 vegetal, proteína completa e fibras que regulam o intestino." },
+      { ingredient: "Leite de amêndoas", benefit: "Baixo em calorias, sem lactose e fonte natural de vitamina E antioxidante." },
+      { ingredient: "Iogurte grego", benefit: "Alta densidade proteica, probióticos que fortalecem a flora intestinal e imunidade." },
+      { ingredient: "Morango", benefit: "Rico em antioxidantes, vitamina C e polifenóis que combatem o envelhecimento celular." },
+      { ingredient: "Granola sem açúcar", benefit: "Adiciona crocância, fibras e minerais como magnésio e zinco." }
+    ],
+    nutritionalTable: [
+      { nutrient: "Calorias", quantity: "285 kcal" },
+      { nutrient: "Proteínas", quantity: "11 g" },
+      { nutrient: "Carboidratos", quantity: "42 g" },
+      { nutrient: "Fibras", quantity: "9 g" },
+      { nutrient: "Gorduras totais", quantity: "7 g" },
+      { nutrient: "Ômega-3", quantity: "1,8 g" },
+      { nutrient: "Cálcio", quantity: "180 mg" },
+      { nutrient: "Sódio", quantity: "95 mg" }
+    ],
+    differentiation: [
+      "**Por que esta receita é diferenciada**",
+      "• Não precisa cozinhar — a hidratação natural da aveia preserva 100% dos nutrientes.",
+      "• Fórmula equilibrada em macros: carboidrato de baixo IG + proteína + gordura boa.",
+      "• Meal prep real: prepare uma vez e resolva 3 cafés da manhã da semana.",
+      "**Vantagens funcionais**",
+      "• Excelente para atletas: repõe glicogênio muscular quando consumida logo pela manhã.",
+      "• Livre de açúcar refinado, de conservantes e de gordura trans."
+    ],
+    entrepreneurship: [
+      "**Modelo de negócio**",
+      "• Venda em potes de vidro para academias, coworkings, hospitais e delivery de café da manhã fitness.",
+      "**Cardápio recorrente**",
+      "• Crie assinatura semanal (5 potes por R$ 89) com sabores rotativos — morango, manga, mirtilo, cacau e banana.",
+      "**Preço sugerido**",
+      "• Custo por pote: R$ 4,50. Venda unitária: R$ 18 a R$ 24 — margem acima de 300%.",
+      "**Marketing visual**",
+      "• As camadas coloridas são altamente 'instagramáveis'. Foto de topo com colher entrando no pote é a mais compartilhada.",
+      "• Explore hashtags como #overnightoats #cafedamanhãfitness #mealprep."
+    ],
+    history: [
+      "O overnight oats nasceu na Suíça no fim do século XIX pelas mãos do médico Maximilian Bircher-Benner, criador do 'Bircher Muesli', com o objetivo de melhorar a digestão de seus pacientes.",
+      "Nos Estados Unidos, ganhou popularidade em massa a partir de 2013 nas redes sociais como solução de café da manhã prático para profissionais e atletas.",
+      "No Brasil, virou febre entre nutricionistas funcionais e coaches fitness, com versões tropicais que incluem morango, açaí, coco e maracujá — reforçando a identidade brasileira da receita."
+    ],
+    faq: [
+      { question: "Overnight oats precisa mesmo ficar de molho a noite toda?", answer: "O ideal são 6 a 12 horas para hidratar totalmente a aveia e a chia. Em emergência, 2 horas na geladeira já funcionam, mas a textura fica menos cremosa." },
+      { question: "Posso comer overnight oats quente?", answer: "Sim, aqueça no micro-ondas por 40 a 60 segundos sem tampa. Fica com textura de mingau cremoso." },
+      { question: "Quantas calorias tem overnight oats?", answer: "Esta versão tem 285 kcal por porção, considerada uma refeição completa e equilibrada de café da manhã." },
+      { question: "Overnight oats emagrece?", answer: "Sim, quando faz parte de uma dieta com déficit calórico. As fibras da aveia e da chia promovem saciedade prolongada, reduzindo a fome ao longo da manhã." },
+      { question: "Posso usar leite comum ao invés de vegetal?", answer: "Sim, leite de vaca desnatado funciona perfeitamente. Aumenta a proteína e o cálcio da receita." },
+      { question: "Quanto tempo dura na geladeira?", answer: "Até 4 dias em pote de vidro fechado, mantendo textura e sabor. Adicione frutas frescas apenas no dia do consumo." },
+      { question: "Preciso adoçar overnight oats?", answer: "Não é obrigatório. O morango maduro e a essência de baunilha já entregam doçura natural. Se preferir, use mel, tâmara ou stevia." },
+      { question: "Posso adicionar whey protein?", answer: "Sim, 1 scoop (30g) transforma em refeição pós-treino com cerca de 35g de proteína no total." },
+      { question: "Crianças podem comer overnight oats?", answer: "Sim, é uma excelente opção nutritiva para crianças a partir dos 2 anos, sem açúcares adicionados." }
+    ],
+    comments: 0,
+  },
+  {
+    id: 38,
+    slug: "estrogonofe-de-frango-fitness-cremoso-sem-creme-de-leite",
+    title: "Estrogonofe de Frango Fitness Cremoso Sem Creme de Leite",
+    excerpt: "Uma releitura fitness do clássico brasileiro mais amado dos almoços de domingo: estrogonofe de frango incrivelmente cremoso, feito com iogurte grego no lugar do creme de leite tradicional, requeijão light e cogumelos frescos. Todo o sabor, textura e conforto do prato original com menos da metade das calorias e o dobro de proteína — perfeito para dietas de definição, hipertrofia e reeducação alimentar.",
+    subtitle: "Estrogonofe de frango light e proteico, sem creme de leite e sem ketchup — a receita fitness cremosa e saborosa que substitui perfeitamente a versão tradicional no seu almoço.",
+    image: recipeImage('estrogonofe-de-frango-fitness-cremoso.webp'),
+    category: "Almoço e Jantar",
+    author: 'Culinária Fitness',
+    authorAvatar: avatar,
+    date: "16 de julho, 2026",
+    course: "Prato Principal",
+    cuisine: 'Brasileira',
+    difficulty: "Médio",
+    servings: 4,
+    prepTime: 15,
+    cookTime: 25,
+    calories: 245,
+    ingredients: [
+      "500g de peito de frango em cubos médios (proteína magra de alta qualidade).",
+      "1 colher de sopa de azeite de oliva extravirgem.",
+      "1 cebola média picada finamente.",
+      "3 dentes de alho amassados.",
+      "200g de champignon (cogumelos Paris) fatiados.",
+      "1 colher de sopa de mostarda dijon (dá o toque clássico do estrogonofe).",
+      "2 colheres de sopa de extrato de tomate concentrado, sem açúcar.",
+      "1 colher de chá de páprica defumada.",
+      "1 colher de chá de sal rosa e pimenta-do-reino a gosto.",
+      "1 xícara de iogurte grego natural desnatado (substitui perfeitamente o creme de leite).",
+      "2 colheres de sopa de requeijão light ou cottage batido (extra cremosidade).",
+      "1 colher de sopa de salsinha fresca picada.",
+      "Suco de 1/2 limão para marinar o frango.",
+      "Acompanhamentos: arroz integral cozido e batata palha assada (opcional, receita nas notas)."
+    ],
+    directions: [
+      "Marinada do frango: em uma tigela, tempere o frango em cubos com o suco de limão, metade do sal, pimenta-do-reino e páprica defumada. Deixe marinar por 10 a 15 minutos.",
+      "Selando o frango: em uma frigideira antiaderente grande, aqueça o azeite em fogo alto. Sele os cubos de frango em porções pequenas por 3 a 4 minutos de cada lado, até dourarem. Retire e reserve.",
+      "Refogado: na mesma frigideira, em fogo médio, refogue a cebola até ficar translúcida. Acrescente o alho e cozinhe por mais 1 minuto, cuidando para não queimar.",
+      "Cogumelos: adicione os champignons fatiados e refogue por 5 minutos, até liberarem a água natural e caramelizarem levemente.",
+      "Molho base: acrescente o extrato de tomate e a mostarda dijon, misturando bem. Cozinhe por 2 minutos para os sabores se integrarem.",
+      "Retorno do frango: volte o frango para a frigideira, misture delicadamente e cozinhe por mais 5 minutos em fogo médio-baixo, até ficar totalmente cozido por dentro.",
+      "Cremosidade fitness: desligue o fogo (etapa crucial para o iogurte não talhar). Espere 2 minutos e acrescente o iogurte grego e o requeijão light, misturando com movimentos suaves até formar um creme aveludado e brilhante.",
+      "Ajuste final: retorne ao fogo baixíssimo por 1 minuto apenas para aquecer. Ajuste sal e pimenta e finalize com salsinha fresca.",
+      "Servindo: sirva imediatamente sobre arroz integral quente com batata palha crocante assada por cima (batata em palito fina + 1 fio de azeite + forno a 200°C por 20 minutos)."
+    ],
+    notes: [
+      "Nunca ferva o iogurte grego após adicionado — o excesso de calor faz o creme talhar. Fogo baixíssimo é a chave.",
+      "Para versão mais cremosa, bata o iogurte no liquidificador com o requeijão antes de incorporar.",
+      "Congele em porções individuais por até 60 dias — descongele em fogo baixo mexendo sempre.",
+      "Substitua o frango por filé mignon em tiras finas ou tofu firme para versões vermelha ou vegetariana.",
+      "Para versão low carb, substitua o arroz por arroz de couve-flor ou espaguete de abobrinha."
+    ],
+    nutritionalBenefits: [
+      { ingredient: "Peito de frango", benefit: "Fonte magra de proteína completa, essencial para hipertrofia e recuperação muscular." },
+      { ingredient: "Iogurte grego desnatado", benefit: "Substitui o creme de leite reduzindo 70% da gordura e triplicando o teor proteico." },
+      { ingredient: "Champignon", benefit: "Baixíssima caloria, rico em selênio, vitaminas do complexo B e potássio." },
+      { ingredient: "Mostarda dijon", benefit: "Sabor intenso com poucas calorias, ativa o metabolismo e melhora a digestão." },
+      { ingredient: "Azeite extravirgem", benefit: "Gordura monoinsaturada que protege o coração e potencializa a absorção de vitaminas." },
+      { ingredient: "Páprica defumada", benefit: "Rica em antioxidantes e capsaicina termogênica que acelera o metabolismo." }
+    ],
+    nutritionalTable: [
+      { nutrient: "Calorias", quantity: "245 kcal" },
+      { nutrient: "Proteínas", quantity: "34 g" },
+      { nutrient: "Carboidratos", quantity: "9 g" },
+      { nutrient: "Fibras", quantity: "1,5 g" },
+      { nutrient: "Gorduras totais", quantity: "7 g" },
+      { nutrient: "Gorduras saturadas", quantity: "1,5 g" },
+      { nutrient: "Sódio", quantity: "320 mg" }
+    ],
+    differentiation: [
+      "**Por que este estrogonofe é premium**",
+      "• Sem creme de leite tradicional, sem ketchup e sem mostarda amarela industrializada.",
+      "• Iogurte grego + requeijão light replicam a cremosidade original com 70% menos gordura.",
+      "• 34g de proteína por porção — ideal para dietas de definição e hipertrofia.",
+      "**Diferencial de sabor**",
+      "• Páprica defumada e mostarda dijon garantem profundidade de sabor que rivaliza com a receita tradicional.",
+      "• Cogumelos frescos (não em conserva) trazem umami natural sem sódio excessivo."
+    ],
+    entrepreneurship: [
+      "**Marmita fitness premium**",
+      "• Ideal para marmitarias fitness: se mantém cremoso após congelamento e descongelamento.",
+      "• Combine com 100g de arroz integral e 30g de batata palha assada para uma marmita de 400g completa.",
+      "**Precificação**",
+      "• Custo por marmita: R$ 8,50. Venda sugerida: R$ 26 a R$ 34 — margem superior a 200%.",
+      "**Diferenciação no mercado**",
+      "• Rotule como 'sem creme de leite' e 'alto em proteína (34g)' — dois dos apelos mais buscados.",
+      "**Marketing**",
+      "• Grave o momento em que o iogurte é incorporado e cria o creme sedoso — vídeos ASMR de estrogonofe fitness performam extremamente bem.",
+      "• Hashtags: #estrogonofefitness #marmitasaudavel #frangofitness."
+    ],
+    history: [
+      "O estrogonofe nasceu na Rússia no século XIX, criado no palácio da família aristocrática Stroganoff, originalmente com tiras de carne bovina, mostarda e creme azedo (smetana).",
+      "Chegou ao Brasil na década de 1950 pela mão de imigrantes russos, ganhando uma versão nacional com molho de tomate, creme de leite e o clássico acompanhamento de arroz e batata palha.",
+      "A versão fitness surgiu nos anos 2010, impulsionada pelo movimento de reeducação alimentar, com o objetivo de preservar o sabor afetivo brasileiro adaptando à busca por saúde e composição corporal."
+    ],
+    faq: [
+      { question: "Posso fazer estrogonofe sem creme de leite?", answer: "Sim, o iogurte grego natural desnatado substitui perfeitamente, mantendo a cremosidade e reduzindo drasticamente calorias e gorduras." },
+      { question: "O iogurte não talha no estrogonofe?", answer: "Não talha se você desligar o fogo antes de adicionar e retornar ao fogo baixíssimo apenas para aquecer. Nunca ferva." },
+      { question: "Quantas calorias tem estrogonofe fitness?", answer: "Esta versão tem 245 kcal por porção (sem acompanhamentos), comparado a 480 kcal do estrogonofe tradicional — 50% menos." },
+      { question: "Posso congelar estrogonofe de frango?", answer: "Sim, congele por até 60 dias em pote hermético. Descongele em fogo baixo mexendo sempre para preservar a cremosidade." },
+      { question: "Estrogonofe fitness é low carb?", answer: "Sim, o prato principal tem apenas 9g de carboidrato. Para dieta low carb estrita, substitua o arroz por arroz de couve-flor." },
+      { question: "Posso usar iogurte natural comum?", answer: "Pode, mas a textura fica mais líquida. O iogurte grego é ideal por ser mais denso e proteico. Se usar iogurte comum, escorra em coador de pano por 2 horas." },
+      { question: "Qual o melhor arroz para acompanhar?", answer: "Arroz integral é a melhor opção fitness. Também combina com arroz 7 grãos, arroz negro ou arroz de couve-flor para versão low carb." },
+      { question: "Serve para hipertrofia muscular?", answer: "Sim, com 34g de proteína por porção é excelente para pós-treino e para atletas em fase de ganho de massa." },
+      { question: "Crianças gostam da versão fitness?", answer: "Sim, o sabor é muito próximo ao tradicional. Para paladar infantil, reduza a mostarda dijon pela metade." }
+    ],
+    comments: 0,
+  },
+  {
+    id: 39,
+    slug: "brownie-fitness-de-batata-doce-e-cacau-sem-gluten-sem-acucar",
+    title: "Brownie Fitness de Batata Doce e Cacau Sem Glúten e Sem Açúcar",
+    excerpt: "O brownie fitness definitivo: incrivelmente úmido, denso, com aquele centro molhadinho característico do brownie clássico — só que feito com batata doce cozida, cacau 100% e adoçante natural. Zero farinha de trigo, zero açúcar refinado e zero manteiga. A sobremesa saudável perfeita para quem faz dieta cetogênica moderada, é intolerante ao glúten ou simplesmente quer provar que comida de verdade pode ser doce, indulgente e nutritiva ao mesmo tempo.",
+    subtitle: "Receita de brownie fit funcional com batata doce, cacau em pó e pasta de amendoim — sem farinha, sem glúten, sem lactose e sem açúcar, com apenas 6 ingredientes.",
+    image: recipeImage('brownie-fitness-de-batata-doce-e-cacau-sem-gluten.webp'),
+    category: "Sobremesas Fit",
+    author: 'Culinária Fitness',
+    authorAvatar: avatar,
+    date: "16 de julho, 2026",
+    course: "Sobremesa",
+    cuisine: 'Internacional',
+    difficulty: "Fácil",
+    servings: 9,
+    prepTime: 15,
+    cookTime: 30,
+    calories: 128,
+    ingredients: [
+      "2 batatas doces médias (aproximadamente 400g cozidas e amassadas).",
+      "3 colheres de sopa cheias de cacau em pó 100%, sem açúcar.",
+      "3 colheres de sopa de pasta de amendoim integral sem açúcar.",
+      "2 ovos grandes em temperatura ambiente.",
+      "3 colheres de sopa de xilitol ou eritritol (adoçantes naturais).",
+      "1 colher de chá de essência de baunilha.",
+      "1 colher de chá de fermento em pó químico.",
+      "1 pitada generosa de sal rosa do Himalaia.",
+      "3 colheres de sopa de gotas de chocolate 70% cacau (opcional, para textura).",
+      "Cacau em pó extra para polvilhar (opcional)."
+    ],
+    directions: [
+      "Cozinhando a batata doce: descasque, corte em cubos e cozinhe no vapor por 15 a 20 minutos, ou até ficar bem macia. Escorra completamente e amasse com um garfo até formar um purê liso. Deixe amornar.",
+      "Cozinhando a batata doce: dica alternativa: asse a batata doce inteira com casca a 200°C por 45 minutos — o sabor caramelizado fica ainda mais intenso.",
+      "Pré-preparo: preaqueça o forno a 180°C. Forre uma forma quadrada de 20x20 cm com papel-manteiga, deixando sobras nas laterais para desenformar facilmente.",
+      "Base cremosa: em uma tigela grande, misture a batata doce amassada, a pasta de amendoim (levemente aquecida por 20 segundos no micro-ondas facilita) e a essência de baunilha. Misture bem até formar um creme homogêneo.",
+      "Ingredientes secos: em outra tigela, peneire o cacau em pó com o fermento e o adoçante. Misture bem para evitar grumos amargos.",
+      "Incorporando ovos: adicione os ovos batidos à mistura de batata doce, mexendo bem com uma espátula até incorporar completamente.",
+      "União das misturas: acrescente a mistura de cacau em pó em duas etapas, envolvendo delicadamente para não perder aeração. A massa ficará densa, brilhante e escura como brownie tradicional.",
+      "Toque final: adicione as gotas de chocolate 70% e a pitada de sal, misturando por último. O sal realça o sabor do cacau.",
+      "Assando: transfira a massa para a forma preparada, alisando a superfície com uma espátula. Bata a forma na bancada 2 vezes para eliminar bolhas de ar.",
+      "Assando: leve ao forno preaquecido por 25 a 30 minutos. O brownie está pronto quando a superfície estiver firme mas o centro ainda parecer levemente molhadinho ao inserir um palito — essa é a textura fudgy característica.",
+      "Resfriamento: retire do forno e deixe esfriar completamente na forma antes de cortar (mínimo 30 minutos). Corte em 9 quadrados iguais.",
+      "Sirva polvilhado com cacau em pó, acompanhado de frutas vermelhas frescas ou uma bola de sorvete de banana congelada."
+    ],
+    notes: [
+      "O segredo do brownie fudgy é NÃO assar demais. Retire quando o centro ainda estiver ligeiramente molhado — ele firma ao esfriar.",
+      "Armazene em pote hermético refrigerado por até 7 dias — o sabor melhora no dia seguinte.",
+      "Congele em porções individuais embaladas em papel-manteiga por até 90 dias.",
+      "Para versão vegana, substitua os ovos por 2 'ovos de linhaça' (2 colheres de sopa de linhaça moída + 6 colheres de sopa de água, hidratados por 10 minutos).",
+      "Sirva morno com pasta de amendoim derretida por cima — fica no nível de sobremesa de restaurante."
+    ],
+    nutritionalBenefits: [
+      { ingredient: "Batata doce", benefit: "Fonte de carboidrato de baixo índice glicêmico, rica em betacaroteno e potássio." },
+      { ingredient: "Cacau 100%", benefit: "Antioxidante poderoso com flavonoides que protegem o coração e melhoram o humor via serotonina." },
+      { ingredient: "Pasta de amendoim", benefit: "Fornece gorduras monoinsaturadas, proteína vegetal e magnésio essencial para recuperação muscular." },
+      { ingredient: "Ovos", benefit: "Proteína de altíssimo valor biológico com todos os aminoácidos essenciais para o organismo." },
+      { ingredient: "Xilitol", benefit: "Adoçante natural com 40% menos calorias que o açúcar e índice glicêmico próximo de zero." },
+      { ingredient: "Sal rosa", benefit: "Contém 84 minerais traço e realça o sabor do cacau sem elevar significativamente o sódio." }
+    ],
+    nutritionalTable: [
+      { nutrient: "Calorias", quantity: "128 kcal" },
+      { nutrient: "Proteínas", quantity: "4,5 g" },
+      { nutrient: "Carboidratos", quantity: "14 g" },
+      { nutrient: "Fibras", quantity: "3 g" },
+      { nutrient: "Gorduras totais", quantity: "6 g" },
+      { nutrient: "Gorduras saturadas", quantity: "1,8 g" },
+      { nutrient: "Açúcares adicionados", quantity: "0 g" },
+      { nutrient: "Sódio", quantity: "45 mg" }
+    ],
+    differentiation: [
+      "**Por que este brownie é premium**",
+      "• Sem farinha, sem glúten, sem lactose e sem açúcar refinado — apenas ingredientes reais e funcionais.",
+      "• Textura fudgy autêntica graças à batata doce, que substitui manteiga e farinha.",
+      "• Alto teor de fibra e antioxidantes do cacau 100%.",
+      "**Diferencial nutricional**",
+      "• Apenas 128 kcal por porção contra 350 kcal do brownie tradicional — 63% menos calorias.",
+      "• Zero pico glicêmico graças aos adoçantes naturais e à batata doce de baixo IG."
+    ],
+    entrepreneurship: [
+      "**Nicho gourmet fitness**",
+      "• Confeitarias saudáveis, cafés especiais, boxes de assinatura fitness e delivery de sobremesas funcionais.",
+      "**Formatos de venda**",
+      "• Unidade individual embalada, caixa com 6 unidades ou 'brownie box' assinatura mensal com sabores rotativos.",
+      "**Preço sugerido**",
+      "• Custo unitário: R$ 1,80. Venda sugerida: R$ 8 a R$ 14 por unidade — margem entre 350% e 600%.",
+      "**Selos que vendem**",
+      "• Rotule com 'sem glúten', 'sem lactose', 'zero açúcar', 'vegano' (na versão adaptada) e 'funcional'. Cada selo aumenta o percebido de valor.",
+      "**Divulgação premium**",
+      "• Fotografia com corte revelando o centro molhadinho é o post mais compartilhado em redes fitness.",
+      "• Hashtags: #browniefitness #brownieSaudavel #sobremesafit."
+    ],
+    history: [
+      "O brownie foi criado nos Estados Unidos no final do século XIX, atribuído à cozinheira Bertha Palmer, que encomendou ao chef do Palmer House Hotel de Chicago uma sobremesa de bolso para damas em uma feira mundial de 1893.",
+      "Rapidamente virou símbolo da confeitaria americana e conquistou o mundo com sua textura característica entre bolo e biscoito.",
+      "A versão fitness surgiu nos anos 2010 impulsionada pelo movimento clean eating e ganhou força no Brasil com o boom das confeitarias funcionais e das redes sociais fitness — hoje é uma das sobremesas saudáveis mais buscadas no Google."
+    ],
+    faq: [
+      { question: "Brownie fitness realmente parece com o tradicional?", answer: "Sim, a textura fudgy e o sabor intenso de cacau são muito próximos. A batata doce entrega umidade e maciez idênticas às da farinha com manteiga." },
+      { question: "Qual o melhor adoçante para brownie fit?", answer: "Xilitol e eritritol são os melhores — resistem ao calor, adoçam bem e não deixam residual amargo. Stevia pode deixar sabor metálico." },
+      { question: "Posso substituir a batata doce por outra?", answer: "Sim, abóbora cabotiá cozida ou banana madura amassada funcionam. Cada uma altera levemente o sabor final." },
+      { question: "Brownie fitness engorda?", answer: "Não, consumindo em porções (1 unidade de 128 kcal). É rico em fibras e proteína, o que promove saciedade e evita picos glicêmicos." },
+      { question: "Por que meu brownie ficou seco?", answer: "Provavelmente assou demais. O brownie fudgy precisa ser retirado quando o palito sair levemente úmido — ele firma ao esfriar." },
+      { question: "É possível fazer versão vegana?", answer: "Sim, substitua os 2 ovos por 2 ovos de linhaça (2 colheres de sopa de linhaça moída + 6 colheres de água, hidratadas 10 minutos)." },
+      { question: "Brownie de batata doce é low carb?", answer: "É moderadamente low carb (14g por porção). Para versão estrita, reduza a batata doce em 25% e adicione 2 colheres de farinha de amêndoas." },
+      { question: "Posso congelar brownie fit?", answer: "Sim, até 90 dias congelado em porções embaladas com papel-manteiga. Descongele em temperatura ambiente por 30 minutos." },
+      { question: "Serve para pré ou pós-treino?", answer: "Excelente para pré-treino (energia sustentada da batata doce e cacau) e pós-treino (junto de um shake proteico, completa a refeição de recuperação)." }
+    ],
     comments: 0,
   }
 ];
