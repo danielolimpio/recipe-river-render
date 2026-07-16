@@ -96,7 +96,7 @@ const RecipePost = () => {
           </div>
 
           {/* Hero image with print badge */}
-          <div className="relative rounded-md overflow-hidden mb-10">
+          <div className="relative rounded-md overflow-hidden mb-6">
             <SmartImage
               src={recipe.image}
               alt={recipe.title}
@@ -108,6 +108,15 @@ const RecipePost = () => {
               <Printer className="h-4 w-4" /> Imprimir
             </button>
           </div>
+
+          {/* Subtitle below image */}
+          {recipe.subtitle && (
+            <div className="mb-10 text-center">
+              <h2 className="text-xl md:text-2xl font-extrabold text-tasty-dark leading-snug italic border-l-4 border-primary pl-4 md:pl-6 text-left md:text-center md:border-l-0 md:border-t-2 md:border-b-2 md:border-primary/40 md:py-4 md:px-4">
+                {recipe.subtitle}
+              </h2>
+            </div>
+          )}
 
           {/* Recipe card */}
           <div className="border border-border rounded-md overflow-hidden mb-12">
