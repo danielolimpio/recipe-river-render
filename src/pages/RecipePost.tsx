@@ -34,6 +34,50 @@ const RecipePost = () => {
         type="article"
         image={recipe.image}
       />
+      {/* Recipe JSON-LD for rich results */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Recipe',
+            name: recipe.title,
+            image: [recipe.image?.startsWith('http') ? recipe.image : `https://culinariafitness.com${recipe.image}`],
+            description: recipe.excerpt,
+            author: { '@type': 'Person', name: recipe.author },
+            datePublished: recipe.date,
+            recipeCategory: recipe.category,
+            recipeCuisine: 'Fitness',
+            keywords: `${recipe.title}, receita fitness, ${recipe.category.toLowerCase()}`,
+            prepTime: `PT${recipe.prepTime}M`,
+            cookTime: `PT${recipe.cookTime}M`,
+            totalTime: `PT${recipe.prepTime + recipe.cookTime}M`,
+            recipeYield: `${recipe.servings} porções`,
+            nutrition: { '@type': 'NutritionInformation', calories: `${recipe.calories} kcal` },
+            recipeIngredient: recipe.ingredients,
+            recipeInstructions: recipe.directions.map((step, i) => ({
+              '@type': 'HowToStep',
+              position: i + 1,
+              text: step,
+            })),
+          }),
+        }}
+      />
+      {/* Breadcrumb JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://culinariafitness.com/' },
+              { '@type': 'ListItem', position: 2, name: 'Receitas', item: 'https://culinariafitness.com/receitas' },
+              { '@type': 'ListItem', position: 3, name: recipe.title, item: `https://culinariafitness.com/receita/${recipe.slug}` },
+            ],
+          }),
+        }}
+      />
       {/* Header banner */}
       <section className="page-banner py-20">
         <div className="container-tasty relative z-10 text-center max-w-3xl">
