@@ -29,12 +29,13 @@ export interface Recipe {
 }
 
 const recipeImage = (filename: string) => `/images/recipes/${filename}`;
+const recipeCover = (filename: string) => `/images/recipes/covers/${filename}`;
 
-const img_agua_saborizada_com_limao_hortela_e_pepino = { url: recipeImage('agua-saborizada-com-limao-hortela-e-pepino.webp') };
-const img_bolinho_de_chuva_fitness_tradicao_em_uma_versao_saudavel_e_saborosa = { url: recipeImage('bolinho-de-chuva-fitness-tradicao-em-uma-versao-saudavel-e-saborosa.webp') };
-const img_bolo_de_caneca_fitness_rapido_saudavel_e_perfeito_para_qualquer_hora = { url: recipeImage('bolo-de-caneca-fitness-rapido-saudavel-e-perfeito-para-qualquer-hora.webp') };
-const img_bolo_de_cenoura_fitness_com_cobertura_de_chocolate_amargo = { url: recipeImage('bolo-de-cenoura-fitness-com-cobertura-de-chocolate-amargo.webp') };
-const img_como_fazer_waffles_fit_com_whey_protein = { url: recipeImage('como-fazer-waffles-fit-com-whey-protein.webp') };
+const img_agua_saborizada_com_limao_hortela_e_pepino = { url: recipeCover('agua-saborizada-com-limao-hortela-e-pepino-cover.jpg') };
+const img_bolinho_de_chuva_fitness_tradicao_em_uma_versao_saudavel_e_saborosa = { url: recipeCover('bolinho-de-chuva-fitness-tradicao-em-uma-versao-saudavel-e-saborosa-cover.jpg') };
+const img_bolo_de_caneca_fitness_rapido_saudavel_e_perfeito_para_qualquer_hora = { url: recipeCover('bolo-de-caneca-fitness-rapido-saudavel-e-perfeito-para-qualquer-hora-cover.jpg') };
+const img_bolo_de_cenoura_fitness_com_cobertura_de_chocolate_amargo = { url: recipeCover('bolo-de-cenoura-fitness-com-cobertura-de-chocolate-amargo-cover.jpg') };
+const img_como_fazer_waffles_fit_com_whey_protein = { url: recipeCover('como-fazer-waffles-fit-com-whey-protein-cover.jpg') };
 const img_crepioca_pratica_para_energia_sustentada = { url: recipeImage('crepioca-pratica-para-energia-sustentada.webp') };
 const img_omeletes_com_vegetais_simples_e_saudaveis = { url: recipeImage('omeletes-com-vegetais-simples-e-saudaveis.webp') };
 const img_panqueca_fitness_leve_versatil_e_deliciosa = { url: recipeImage('panqueca-fitness-leve-versatil-e-deliciosa.webp') };
@@ -1479,7 +1480,7 @@ export const recipes: Recipe[] = [
   }
 ];
 
-export const trendingRecipes = recipes.slice(0, 4).map((r) => ({ title: r.title, image: r.image, slug: r.slug }));
+export const trendingRecipes = recipes.slice(0, 5).map((r) => ({ title: r.title, image: r.image, slug: r.slug }));
 
 export const chefs = [
   { name: 'Nick Paterson', role: 'Chef Executivo', avatar: '/images/people/chef-nick.webp' },
