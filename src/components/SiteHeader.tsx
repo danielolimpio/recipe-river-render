@@ -78,31 +78,29 @@ export const SiteHeader = () => {
       {/* Desktop bar - green gradient */}
       <div className="hidden md:block bg-header-gradient text-white">
         <div className="container-tasty">
-          <div className="flex items-center justify-between h-20 gap-8">
-            <div className="flex items-center gap-10">
-              <Link to="/" aria-label="Culinária Fitness — Início" className="flex items-center">
-                <img src={logo} alt="Culinária Fitness" className="h-14 w-auto" />
-              </Link>
+          <div className="flex items-center h-20 gap-8">
+            <Link to="/" aria-label="Culinária Fitness — Início" className="flex items-center shrink-0">
+              <img src={logo} alt="Culinária Fitness" className="h-14 w-auto" />
+            </Link>
 
-              <nav className="flex items-center gap-8">
-                {navItems.map((item) => (
-                  <NavLink
-                    key={item.to}
-                    to={item.to}
-                    end={item.to === '/'}
-                    className={({ isActive }) =>
-                      `text-sm font-semibold transition-colors ${
-                        isActive ? 'text-white underline underline-offset-4 decoration-2' : 'text-white/90 hover:text-white'
-                      }`
-                    }
-                  >
-                    {item.label}
-                  </NavLink>
-                ))}
-              </nav>
-            </div>
+            <nav className="flex-1 flex items-center justify-center gap-8">
+              {navItems.map((item) => (
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  end={item.to === '/'}
+                  className={({ isActive }) =>
+                    `text-sm font-semibold transition-colors ${
+                      isActive ? 'text-white underline underline-offset-4 decoration-2' : 'text-white/90 hover:text-white'
+                    }`
+                  }
+                >
+                  {item.label}
+                </NavLink>
+              ))}
+            </nav>
 
-            <div className="flex items-center gap-5 text-white/90">
+            <div className="flex items-center gap-5 text-white/90 shrink-0">
               <button
                 onClick={() => setSearchOpen(!searchOpen)}
                 className="hover:text-white transition-colors"
