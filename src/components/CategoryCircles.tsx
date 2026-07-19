@@ -14,10 +14,10 @@ export const CategoryCircles = () => {
       aria-label="Categorias rápidas"
       className="bg-white border-b border-border"
     >
-      <div className="container-tasty py-6">
-        <ul className="flex flex-wrap items-start justify-center gap-6 md:gap-10">
+      <div className="container-tasty py-4">
+        <ul className="flex flex-nowrap items-start justify-center gap-3 sm:gap-6 md:gap-10 overflow-x-auto">
           {items.map((cat) => (
-            <li key={cat.name}>
+            <li key={cat.name} className="flex-shrink-0">
               <Link
                 to={`/receitas?categoria=${encodeURIComponent(cat.name)}`}
                 className="group flex flex-col items-center gap-2 w-16 md:w-20"
@@ -33,7 +33,7 @@ export const CategoryCircles = () => {
                     />
                   </span>
                 </span>
-                <span className="text-xs md:text-sm font-semibold text-tasty-dark text-center leading-tight group-hover:text-tasty-orange transition-colors">
+                <span className="text-[10px] md:text-xs font-semibold text-tasty-dark text-center leading-tight group-hover:text-tasty-orange transition-colors">
                   {cat.name}
                 </span>
               </Link>
@@ -42,5 +42,6 @@ export const CategoryCircles = () => {
         </ul>
       </div>
     </nav>
+
   );
 };
